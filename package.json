@@ -1,0 +1,27 @@
+{
+  "name": "Địa điểm du lịch nổi tiếng tại Việt Nam",
+  "version": "1.0.0",
+  "description": "Trang web giới thiệu Các địa điểm du lịch nổi tiếng tại Việt Nam",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nngocanh1401-cloud/TKW_2354050007_NgAnh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nngocanh1401-cloud/TKW_2354050007_NgAnh/issues"
+  },
+  "homepage": "https://github.com/nngocanh1401-cloud/TKW_2354050007_NgAnh#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,31 @@
+@import	"tailwindcss";
+
+@theme	{
+--color-band-50: #f8ffe4;
+--color-brand-100: #eeffc5;
+--color-brand-600: #70b500;
+--color-brand-700: #538902;
+--color-brand-900: #395b0c;
+--color-accent-300: #ffdc4a;
+--color-accent-400: #ffc715;
+--color-accent-500: #f9a907;
+--color-ink: #4c4c4c; 
+--color-muted: #6f6f6f;
+--color-line: #cfcfcf;   
+--color-surface: #f0f0f0; 
+--font-display: "Comfortaa", system-ui, sans-serif; 
+--font-body: "Inter",  system-ui, sans-serif; 
+--text-h1-size: text-6xl;
+--text-h1-weight: font-black;
+--text-h1-leading: leading-none;
+--text-h2-size: text-xl;
+--text-h2-weight: font-normal;
+--text-h3-size: text-base;
+--text-h3-weight: font-medium;
+--radius-card: 0.875rem; 
+--radius-pill: 0.5rem;
+--navbar-py: 1.5rem;
+--section-py-container: 4rem;
+--section-py-logo: 6rem;
+--gap-logo: 0.625rem;
+}
