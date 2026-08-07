@@ -1,5 +1,5 @@
-Chủ đề: Du lịch / Điểm đến du lịch
-Sản phẩm: Các địa điểm du lịch nổi tiếng tại Việt Nam
+Chủ đề: Du lịch / Plan du lịch
+Sản phẩm: Lập kế hoạch chuyến du lịch tại Việt Nam
 Màu thương hiệu: #8ee000
 --color-band-50 #f8ffe4
 --color-brand-100 #eeffc5
@@ -16,7 +16,7 @@ Màu chữ:
 --color-muted: #6f6f6f  <!-- màu chìm -->
 --color-line: #cfcfcf   <!-- màu viền -->
 --color-surface: #f0f0f0 <!-- màu nền trang -->
---font-display: "Comfortaa", system-ui, sans-serif; <!-- font tiêu đề -->
+--font-display: "Be Vietnam Pro", system-ui, sans-serif; <!-- font tiêu đề -->
 --font-body: "Inter",  system-ui, sans-serif; <!-- phông tiêu đề -->
 --text-h1-size: text-6xl;
 --text-h1-weight: font-black;
