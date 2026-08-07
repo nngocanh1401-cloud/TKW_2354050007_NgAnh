@@ -1,7 +1,7 @@
 @import	"tailwindcss";
 
 @theme	{
---color-band-50: #f8ffe4;
+--color-brand-50: #f8ffe4;
 --color-brand-100: #eeffc5;
 --color-brand-600: #70b500;
 --color-brand-700: #538902;
@@ -13,7 +13,7 @@
 --color-muted: #6f6f6f;
 --color-line: #cfcfcf;   
 --color-surface: #f0f0f0; 
---font-display: "Comfortaa", system-ui, sans-serif; 
+--font-display: "Be Vietnam Pro", system-ui, sans-serif; 
 --font-body: "Inter",  system-ui, sans-serif; 
 --text-h1-size: text-6xl;
 --text-h1-weight: font-black;

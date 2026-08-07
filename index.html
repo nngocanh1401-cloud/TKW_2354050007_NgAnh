@@ -4,14 +4,136 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>LOCATION - Phần mềm quản lý các địa điểm du lịch</title>
+    <title>VIETTRIP - Lập kế hoạch du lịch Việt Nam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet' href="./dist/output.css">
 </head>
+
 <body>
-<p style = "color: var(--color-brand-600);"> TEST HTML COLOR</p>
+    <!-- NAVBAR  -->
+    <header>
+        <nav>
+            <div class="mx-auto flex max-w-[1720px] items-center justify-between px-10 py-7">
+                <!-- Custom Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <span
+                        class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-lg font-bold text-white">
+                        V
+                    </span>
+                    <span class="font-display text-2xl font-bold text-brand-900">
+                        VietTrip
+                    </span>
+                </a>
+                <ul class="flex items-center gap-10">
+                    <li>
+                        <a href="#" class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#diem-den"
+                            class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                            Điểm đến
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tinh-nang"
+                            class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                            Tính năng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cam-nang"
+                            class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                            Cẩm nang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#lien-he"
+                            class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex items-center gap-5">
+                    <a href="#" class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+                        Đăng nhập
+                    </a>
+                    <a href="#"
+                        class="rounded-pill bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700">
+                        Bắt đầu
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="mx-auto grid max-w-[1720px] grid-cols-2 items-center gap-16 px-10 pb-20 pt-20">
+            <!-- Hero Content -->
+            <div>
+                <p class="mb-5 text-sm font-semibold uppercase tracking-wider text-brand-600">
+                    KHÁM PHÁ VIỆT NAM THEO CÁCH CỦA BẠN
+                </p>
+                <h1 class="max-w-2xl font-display text-6xl font-black leading-none text-brand-900">
+                    Lên kế hoạch cho những chuyến đi đáng nhớ.
+                </h1>
+                <p class="mt-8 max-w-2xl text-lg leading-8 text-muted">
+                    VietTrip giúp bạn khám phá những địa điểm đẹp nhất tại Việt Nam,
+                    xây dựng lịch trình và quản lý chuyến đi một cách
+                    đơn giản trên một nền tảng duy nhất.
+                </p>
+                <!-- Hero Buttons -->
+                <div class="mt-10 flex items-center gap-4">
+
+                    <a href="#"
+                        class="rounded-pill bg-brand-600 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-700">
+                        Bắt đầu miễn phí
+                    </a>
+                    <a href="#tinh-nang"
+                        class="rounded-pill border border-line px-6 py-3 text-base font-semibold text-ink transition-colors hover:bg-surface">
+                        Khám phá tính năng
+                    </a>
+                </div>
+            </div>
+            <!-- Hero Image -->
+            <div class="flex justify-center">
+                <div class="relative">
+                    <img src="./assets/img/hero-HaLong.jpg" alt="Khám phá những địa điểm du lịch nổi tiếng tại Việt Nam"
+                        class="w-full max-w-2xl object-contain">
+                </div>
+            </div>
+        </section>
+        <!-- DESTINATIONS  -->
+        <section id="diem-den" class="mx-auto max-w-[1720px] px-10 pb-20">
+            <div class="flex items-center justify-between gap-10">
+                <div class="flex items-center gap-16">
+                    <span class="text-2xl font-semibold text-muted">
+                        Hà Nội
+                    </span>
+                    <span class="text-2xl font-semibold text-muted">
+                        Đà Nẵng
+                    </span>
+                    <span class="text-2xl font-semibold text-muted">
+                        Hội An
+                    </span>
+                    <span class="text-2xl font-semibold text-muted">
+                        Đà Lạt
+                    </span>
+                    <span class="text-2xl font-semibold text-muted">
+                        Phú Quốc
+                    </span>
+                    <span class="text-2xl font-semibold text-muted">
+                        Hạ Long
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 {
-  "name": "Địa điểm du lịch nổi tiếng tại Việt Nam",
+  "name": "Lập kế hoạch du lịch tại Việt Nam",
   "version": "1.0.0",
-  "description": "Trang web giới thiệu Các địa điểm du lịch nổi tiếng tại Việt Nam",
+  "description": "Trang web hỗ trợ lập kế hoạch chuyến du lịch Việt Nam",
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
