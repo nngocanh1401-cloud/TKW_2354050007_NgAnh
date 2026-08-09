@@ -23,7 +23,7 @@
 --text-h3-size: text-base;
 --text-h3-weight: font-medium;
 --radius-card: 0.875rem; 
---radius-pill: 0.5rem;
+--radius-pill: 999px;
 --navbar-py: 1.5rem;
 --section-py-container: 4rem;
 --section-py-logo: 6rem;
