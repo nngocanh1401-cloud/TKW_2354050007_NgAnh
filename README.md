@@ -46,3 +46,6 @@ figma 		taiwindcss
 16px		rounded-2xl
 24px		rounded-3xl
 9999px	rounded-full	// bo tròn hoàn toàn
+
+Link git:
+https://github.com/nngocanh1401-cloud/TKW_2354050007_NgAnh
