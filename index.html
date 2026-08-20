@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='vi'>
+<html lang='vi' class="dark">
 
 <head>
     <meta charset='utf-8'>
@@ -17,113 +17,191 @@
     <!-- NAVBAR  -->
     <header class="navbar">
         <nav aria-label="Điều hướng chính">
-            <div class="container-main flex items-center justify-between py-7">
-                <!-- Custom Logo -->
-                <a href="./index.html" class="flex items-center gap-3">
-                    <span
-                        class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-lg font-bold text-white">V</span>
-                    <span class="font-display text-2xl font-bold text-brand-900">VietTrip</span>
+            <div class="container-main flex items-center justify-between py-6">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600">
+                        <span class="font-display text-xl font-bold text-white">V</span>
+                    </div>
+
+                    <span class="font-display text-3xl font-bold
+           text-brand-900 dark:text-ink-invert">
+                        VietTrip
+                    </span>
                 </a>
-                <ul class="flex items-center gap-10">
-                    <li>
-                        <a href="#hero" class="text-base font-medium text-ink hover:text-brand-600">
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#tinh-nang" class="text-base font-medium text-ink hover:text-brand-600">
-                            Tính năng
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#bang-gia" class="text-base font-medium text-ink hover:text-brand-600">
-                            Bảng giá
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#faq" class="text-base font-medium text-ink hover:text-brand-600">
-                            FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#lien-he" class="text-base font-medium text-ink hover:text-brand-600">
-                            Liên hệ
-                        </a>
-                    </li>
-                </ul>
-                <div class="flex items-center gap-5">
-                    <a href="#" class="text-base font-medium text-ink transition-colors hover:text-brand-600">
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-10 text-base font-medium
+                                text-ink dark:text-ink-invert">
+                        <li><a href="#" class="hover:text-brand-600">Trang chủ</a></li>
+                        <li><a href="#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
+                        <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-600">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Buttons -->
+                <div class="hidden items-center gap-5 lg:flex">
+                    <a href="#" class="font-medium text-ink hover:text-brand-600
+           dark:text-ink-invert dark:hover:text-brand-100">
                         Đăng nhập
                     </a>
-                    <a href="#" class="btn btn-primary">
+
+                    <a href="pricing.html" class="btn btn-primary">
                         Bắt đầu
                     </a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
             </div>
         </nav>
     </header>
     <main>
         <!-- HERO -->
-        <section id="hero" class="py-20">
-            <!-- Hero Content -->
-            <div class="container-main grid grid-cols-2 items-center gap-16">
-                <div class="flex flex-col gap-8">
-                    <p class="eyebrow">
-                        KHÁM PHÁ VIỆT NAM THEO CÁCH CỦA BẠN
-                    </p>
-                    <h1 class="max-w-2xl text-6xl text-brand-900">
-                        Lên kế hoạch cho những chuyến đi đáng nhớ.
-                    </h1>
-                    <p class="max-w-2xl text-lg leading-8 text-muted">
-                        VietTrip giúp bạn khám phá những địa điểm đẹp nhất tại Việt Nam,
-                        xây dựng lịch trình và quản lý chuyến đi một cách
-                        đơn giản trên một nền tảng duy nhất.
-                    </p>
-                    <!-- Hero Buttons -->
-                    <div class="flex items-center gap-4">
+        <section class="container-main grid grid-cols-1 items-center gap-14 py-16 lg:grid-cols-2 lg:py-24">
 
-                        <a href="#" class="btn btn-primary">
-                            Bắt đầu miễn phí
-                        </a>
-                        <a href="#tinh-nang" class="btn btn-secondary">
-                            Khám phá tính năng
-                        </a>
-                    </div>
+            <div class="space-y-8">
+
+                <p class="eyebrow">
+                    Khám phá Việt Nam theo cách của bạn
+                </p>
+
+                <h1 class="font-display text-5xl leading-none font-black
+           text-brand-900 dark:text-ink-invert
+           sm:text-6xl lg:text-7xl">
+                    Lên kế hoạch cho những chuyến đi đáng nhớ.
+                </h1>
+
+                <p class="max-w-xl text-lg leading-8
+           text-muted dark:text-muted-invert
+           sm:text-xl">
+                    VietTrip giúp bạn khám phá những địa điểm đẹp nhất tại Việt Nam, xây dựng lịch trình và quản lý
+                    chuyến đi một cách đơn giản trên một nền tảng duy nhất.
+                </p>
+
+                <div class="flex flex-col items-center gap-4 sm:flex-row">
+
+                    <a href="pricing.html" class="btn bg-white text-brand-900 hover:bg-brand-50">
+                        Bắt đầu miễn phí
+                    </a>
+
+                    <a href="#tinh-nang" class="btn border border-brand-100 text-white hover:bg-brand-700">
+                        Xem tính năng
+                    </a>
+
                 </div>
-                <!-- Hero Image -->
-                <div class="flex justify-center">
-                    <img src="./assets/img/hero-HaLong.jpg" alt="Khám phá những địa điểm du lịch nổi tiếng tại Việt Nam"
-                        class="w-full object-cover">
-                </div>
+
             </div>
+
+            <div class="flex justify-center lg:justify-end">
+                <img src="./assets/img/hero-HaLong.jpg" alt="Vịnh Hạ Long"
+                    class="w-full max-w-lg rounded-card object-cover shadow-xl lg:max-w-2xl">
+            </div>
+
         </section>
         <!-- PARTNERS -->
-        <section id="doi-tac" class="py-20">
-            <div class="container-main">
-                <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-                    <li class="text-2xl font-semibold text-muted">
-                        Google
-                    </li>
-                    <li class="text-2xl font-semibold text-muted">
-                        Booking.com
-                    </li>
-                    <li class="text-2xl font-semibold text-muted">
-                        Traveloka
-                    </li>
-                    <li class="text-2xl font-semibold text-muted">
-                        Agoda
-                    </li>
-                    <li class="text-2xl font-semibold text-muted">
-                        Tripadvisor
-                    </li>
-                    <li class="text-2xl font-semibold text-muted">
-                        Airbnb
-                    </li>
-                </ul>
+        <section class="container-main py-14">
+
+            <p class="mb-10 text-center text-sm font-semibold uppercase tracking-widest text-muted">
+                Được đồng hành bởi các đối tác du lịch hàng đầu
+            </p>
+
+            <div class="grid grid-cols-2 items-center gap-8 opacity-70 sm:grid-cols-3 lg:grid-cols-6">
+
+                <img src="./assets/logo/vietnam-airlines.svg" alt="Vietnam Airlines" class="partner-logo mx-auto">
+
+                <img src="./assets/logo/booking.svg" alt="Booking.com" class="partner-logo mx-auto">
+
+                <img src="./assets/logo/agoda.svg" alt="Agoda" class="partner-logo mx-auto">
+
+                <img src="./assets/logo/traveloka.svg" alt="Traveloka" class="partner-logo mx-auto">
+
+                <img src="./assets/logo/vietjet.svg" alt="Vietjet Air" class="partner-logo mx-auto">
+
+                <img src="./assets/logo/airbnb.svg" alt="Airbnb" class="partner-logo mx-auto">
+
             </div>
         </section>
+        <section id="diem-den" class="container-main py-20">
+
+            <div class="mb-12 text-center">
+                <p class="eyebrow">Điểm đến nổi bật</p>
+
+                <h2 class="section-title mt-3">
+                    Khám phá những nơi đẹp nhất Việt Nam
+                </h2>
+
+                <p class="section-description mx-auto mt-4 max-w-2xl">
+                    Từ biển đảo, núi rừng đến phố cổ, VietTrip gợi ý những địa điểm được yêu thích nhất dành cho mọi
+                    hành trình.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card 1 -->
+                <article class="card overflow-hidden p-0">
+                    <img src="./assets/img/halong.jpg" alt="Hạ Long" class="h-56 w-full object-cover">
+
+                    <div class="space-y-3 p-6">
+                        <h3 class="card-title">
+                            Vịnh Hạ Long
+                        </h3>
+
+                        <p class="section-description">
+                            Di sản thiên nhiên thế giới nổi tiếng với hàng nghìn hòn đảo đá vôi kỳ vĩ.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card overflow-hidden p-0">
+                    <img src="./assets/img/danang.webp" alt="Đà Nẵng" class="h-56 w-full object-cover">
+
+                    <div class="space-y-3 p-6">
+                        <h3 class="card-title">
+                            Đà Nẵng
+                        </h3>
+
+                        <p class="section-description">
+                            Thành phố biển hiện đại với cầu Rồng, Bà Nà Hills và bãi biển Mỹ Khê.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card overflow-hidden p-0">
+                    <img src="./assets/img/hoian.jpg" alt="Hội An" class="h-56 w-full object-cover">
+
+                    <div class="space-y-3 p-6">
+                        <h3 class="card-title">
+                            Hội An
+                        </h3>
+
+                        <p class="section-description">
+                            Phố cổ yên bình với đèn lồng, ẩm thực và kiến trúc truyền thống.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
         <!-- FEATURES -->
-        <section id="tinh-nang" class="py-24">
+        <section id="tinh-nang" class="section">
             <div class="container-main">
                 <!-- Section Heading -->
                 <div class="flex max-w-2xl flex-col gap-4">
@@ -156,7 +234,7 @@
                             <h3 class="text-xl font-semibold text-brand-900">
                                 Khám phá địa điểm
                             </h3>
-                            <p class="leading-7 text-muted">
+                            <p class="leading-7 text-muted-theme">
                                 Tìm kiếm những điểm đến nổi bật và lựa chọn nơi
                                 phù hợp với sở thích của bạn.
                             </p>
@@ -300,7 +378,7 @@
                                 </div>
 
                                 <div class="flex flex-col">
-                                    <span class="font-semibold text-ink">
+                                    <span class="font-semibold text-ink-theme">
                                         Minh Anh
                                     </span>
 
@@ -329,11 +407,11 @@
                                 </div>
 
                                 <div class="flex flex-col">
-                                    <span class="font-semibold text-ink">
+                                    <span class="font-semibold text-ink-theme">
                                         Quốc Bảo
                                     </span>
 
-                                    <cite class="text-sm not-italic text-muted">
+                                    <cite class="text-sm not-italic text-muted-theme">
                                         Travel Blogger
                                     </cite>
                                 </div>
@@ -358,7 +436,7 @@
                                 </div>
 
                                 <div class="flex flex-col">
-                                    <span class="font-semibold text-ink">
+                                    <span class="font-semibold text-ink-theme">
                                         Thu Hà
                                     </span>
 
@@ -394,7 +472,7 @@
                         nội dung mà VietTrip đang hướng tới.
                     </p>
                 </div>
-                <dl class="mt-14 grid grid-cols-2 divide-x divide-line lg:grid-cols-4">
+                <dl class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-line">
 
                     <div class="flex flex-col items-center px-6 text-center">
                         <dt class="stat-label">
@@ -468,14 +546,12 @@
                             <h3 class="text-xl font-semibold text-brand-900">
                                 Free
                             </h3>
-                            <p class="text-muted">
+                            <p class="text-muted-theme">
                                 Dành cho những chuyến đi đơn giản.
                             </p>
                         </div>
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-brand-900">
-                                0đ
-                            </span>
+                            <span class="price">0đ</span>
 
                             <span class="text-muted">
                                 / tháng
@@ -502,19 +578,19 @@
                             <h3 class="text-xl font-semibold text-brand-900">
                                 Explorer
                             </h3>
-                            <p class="text-muted">
+                            <p class="text-muted-theme">
                                 Dành cho người thường xuyên du lịch.
                             </p>
                         </div>
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-brand-900">
+                            <span class="price">
                                 99.000đ
                             </span>
                             <span class="text-muted">
                                 / tháng
                             </span>
                         </div>
-                        <ul class="flex flex-col gap-3 text-muted">
+                        <ul class="text-muted-theme flex flex-col gap-3">
                             <li>Không giới hạn lịch trình</li>
                             <li>Quản lý ngân sách chuyến đi</li>
                             <li>Lưu không giới hạn địa điểm</li>
@@ -538,7 +614,7 @@
                         </div>
 
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-brand-900">
+                            <span class="price">
                                 199.000đ
                             </span>
 
@@ -673,9 +749,9 @@
                         của bạn trên một nền tảng duy nhất.
                     </p>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex flex-col items-center gap-4 sm:flex-row">
 
-                        <a href="#" class="btn bg-white text-brand-900 hover:bg-brand-50">
+                        <a href="pricing.html" class="btn bg-white text-brand-900 hover:bg-brand-50">
                             Bắt đầu miễn phí
                         </a>
 
@@ -687,112 +763,50 @@
             </div>
         </section>
     </main>
-    <footer id="lien-he" class="border-t border-line bg-white py-20">
+    <footer class="footer">
 
-        <div class="container-main">
+        <div class="container-main grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
 
-            <div class="grid gap-10 lg:grid-cols-4">
+            <div>
+                <h3 class="footer-title mb-4">VietTrip</h3>
 
-                <!-- Brand -->
-                <div class="flex flex-col gap-4">
-
-                    <a href="./index.html" class="flex items-center gap-3">
-
-                        <span
-                            class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-lg font-bold text-white">
-                            V
-                        </span>
-
-                        <span class="font-display text-2xl font-bold text-brand-900">
-                            VietTrip
-                        </span>
-                    </a>
-                    <p class="leading-7 text-muted">
-                        VietTrip giúp bạn khám phá địa điểm và lên kế hoạch
-                        cho những hành trình đáng nhớ tại Việt Nam.
-                    </p>
-                </div>
-                <!-- Product -->
-                <nav aria-labelledby="footer-product">
-
-                    <h2 id="footer-product" class="mb-4 text-base font-semibold text-brand-900">
-                        Sản phẩm
-                    </h2>
-                    <ul class="flex flex-col gap-3 text-muted">
-                        <li>
-                            <a href="#tinh-nang" class="hover:text-brand-600">
-                                Tính năng
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#bang-gia" class="hover:text-brand-600">
-                                Bảng giá
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#faq" class="footer-link">
-                                Câu hỏi thường gặp
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Support -->
-                <nav aria-labelledby="footer-support">
-
-                    <h2 id="footer-support" class="mb-4 text-base font-semibold text-brand-900">
-                        Hỗ trợ
-                    </h2>
-
-                    <ul class="flex flex-col gap-3 text-muted">
-
-                        <li>
-                            <a href="#" class="hover:text-brand-600">
-                                Trung tâm hỗ trợ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-brand-600">
-                                Chính sách bảo mật
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-brand-600">
-                                Điều khoản sử dụng
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Contact -->
-                <div class="flex flex-col gap-4">
-
-                    <h2 class="footer-title">
-                        Liên hệ
-                    </h2>
-
-                    <address class="flex flex-col gap-2 not-italic text-muted">
-
-                        <span>
-                            TP. Hồ Chí Minh, Việt Nam
-                        </span>
-
-                        <a href="mailto:Viettrip@vt.vn" class="hover:text-brand-600">
-                            Viettrip@vt.vn
-                        </a>
-                    </address>
-                </div>
-            </div>
-            <!-- Bottom -->
-            <div class="mt-12 flex items-center justify-between border-t border-line pt-6 text-sm text-muted">
-
-                <p>
-                    © 2026 VietTrip. All rights reserved.
+                <p class="section-description">
+                    Khám phá Việt Nam theo cách của bạn.
                 </p>
-
-                <a href="#hero" class="hover:text-brand-600">
-                    Lên đầu trang ↑
-                </a>
             </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Điểm đến</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Hạ Long</a></li>
+                    <li><a href="#" class="footer-link">Đà Lạt</a></li>
+                    <li><a href="#" class="footer-link">Phú Quốc</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Cẩm nang</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Lịch trình</a></li>
+                    <li><a href="#" class="footer-link">Mẹo du lịch</a></li>
+                    <li><a href="#" class="footer-link">Ẩm thực</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Liên hệ</h3>
+
+                <ul class="space-y-2">
+                    <li class="footer-link">viettrip@gmail.com</li>
+                    <li class="footer-link">0123 456 789</li>
+                    <li class="footer-link">Hồ Chí Minh, Việt Nam</li>
+                </ul>
+            </div>
+
         </div>
+
     </footer>
 </body>
 

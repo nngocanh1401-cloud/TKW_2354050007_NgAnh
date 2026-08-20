@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>VIETTRIP - Bảng giá </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href="./dist/output.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav aria-label="Điều hướng chính">
+            <div class="container-main flex items-center justify-between py-6">
+
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600">
+                        <span class="font-display text-xl font-bold text-white">V</span>
+                    </div>
+
+                    <span class="font-display text-3xl font-bold text-brand-900 dark:text-ink-invert">
+                        VietTrip
+                    </span>
+                </a>
+
+                <div class="hidden lg:block">
+                    <ul class="flex items-center gap-10 text-base font-medium text-ink dark:text-ink-invert">
+                        <li><a href="index.html" class="hover:text-brand-600">Trang chủ</a></li>
+                        <li><a href="index.html#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
+                        <li><a href="index.html#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+                        <li><a href="pricing.html" class="text-brand-600">Bảng giá</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-600">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden items-center gap-5 lg:flex">
+                    <a href="#" class="font-medium text-ink hover:text-brand-600 dark:text-ink-invert">
+                        Đăng nhập
+                    </a>
+
+                    <a href="#" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
+                </div>
+
+                <button class="lg:hidden" aria-label="Mở menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+
+            <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+
+                <p class="eyebrow">
+                    Bảng giá
+                </p>
+
+                <h1
+                    class="font-display text-4xl font-black text-brand-900 dark:text-ink-invert sm:text-5xl lg:text-6xl">
+                    Chọn gói phù hợp với hành trình của bạn
+                </h1>
+
+                <p class="section-description max-w-2xl">
+                    Bắt đầu miễn phí và nâng cấp khi bạn cần thêm tính năng
+                    cho những chuyến đi dài ngày hoặc đi theo nhóm.
+                </p>
+
+            </div>
+
+        </section>
+        <section class="section pt-0">
+
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+                <article class="card flex h-full flex-col justify-between gap-8">
+
+                    <div class="flex flex-col gap-6">
+
+                        <div class="flex flex-col gap-2">
+                            <h2 class="card-title">
+                                Free
+                            </h2>
+
+                            <p class="text-muted-theme">
+                                Dành cho những chuyến đi đơn giản.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="price">0đ</span>
+                            <span class="text-muted-theme">/ tháng</span>
+                        </div>
+
+                        <ul class="text-muted-theme flex flex-col gap-3">
+                            <li>✓ Khám phá địa điểm</li>
+                            <li>✓ Tạo tối đa 3 lịch trình</li>
+                            <li>✓ Lưu địa điểm yêu thích</li>
+                            <li>— Quản lý ngân sách</li>
+                            <li>— Chia sẻ hành trình</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#" class="btn btn-secondary">
+                        Bắt đầu miễn phí
+                    </a>
+
+                </article>
+
+
+                <!-- EXPLORER -->
+                <article class="card relative flex h-full flex-col gap-6 ring-2 ring-brand-600">
+
+                    <span
+                        class="absolute -top-3 left-6 rounded-pill bg-brand-600 px-3 py-1 text-xs font-semibold text-white">
+                        Phổ biến nhất
+                    </span>
+
+                    <div>
+                        <h2 class="card-title">
+                            Explorer
+                        </h2>
+
+                        <p class="text-muted-theme mt-2">
+                            Dành cho người thường xuyên du lịch.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="price">
+                            99.000đ
+                        </span>
+
+                        <span class="text-muted-theme">
+                            / tháng
+                        </span>
+                    </div>
+
+                    <ul class="text-muted-theme flex flex-col gap-3">
+                        <li>✓ Không giới hạn lịch trình</li>
+                        <li>✓ Quản lý ngân sách</li>
+                        <li>✓ Lưu không giới hạn địa điểm</li>
+                        <li>✓ Gợi ý trải nghiệm</li>
+                        <li>— Chuyến đi nhóm</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary mt-auto">
+                        Chọn Explorer
+                    </a>
+
+                </article>
+
+
+                <!-- PRO -->
+                <article class="card flex h-full flex-col gap-6">
+
+                    <div>
+                        <h2 class="card-title">
+                            Pro
+                        </h2>
+
+                        <p class="text-muted-theme mt-2">
+                            Dành cho nhóm và chuyến đi dài ngày.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="price">
+                            199.000đ
+                        </span>
+
+                        <span class="text-muted-theme">
+                            / tháng
+                        </span>
+                    </div>
+
+                    <ul class="text-muted-theme flex flex-col gap-3">
+                        <li>✓ Tất cả tính năng Explorer</li>
+                        <li>✓ Chia sẻ lịch trình</li>
+                        <li>✓ Quản lý chuyến đi nhóm</li>
+                        <li>✓ Ưu tiên hỗ trợ</li>
+                        <li>✓ Truy cập tính năng mới sớm</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-secondary mt-auto">
+                        Chọn Pro
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+        <section class="section">
+
+            <div class="flex flex-col gap-4">
+                <p class="eyebrow">
+                    So sánh
+                </p>
+
+                <h2 class="section-title">
+                    So sánh chi tiết các gói
+                </h2>
+
+                <p class="section-description max-w-2xl">
+                    Xem nhanh những tính năng có trong từng gói VietTrip.
+                </p>
+            </div>
+
+
+            <div class="overflow-x-auto rounded-card border border-line dark:border-line-invert">
+
+                <table class="min-w-[720px] w-full text-left">
+
+                    <thead class="bg-surface dark:bg-surface-dark-alt">
+                        <tr>
+                            <th class="px-6 py-4">
+                                Tính năng
+                            </th>
+
+                            <th class="px-6 py-4 text-center">
+                                Free
+                            </th>
+
+                            <th class="px-6 py-4 text-center">
+                                Explorer
+                            </th>
+
+                            <th class="px-6 py-4 text-center">
+                                Pro
+                            </th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody class="divide-y divide-line dark:divide-line-invert">
+
+                        <tr>
+                            <td class="px-6 py-4">
+                                Tạo lịch trình
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                3
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                Không giới hạn
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                Không giới hạn
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="px-6 py-4">
+                                Lưu địa điểm
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="px-6 py-4">
+                                Quản lý ngân sách
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                —
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="px-6 py-4">
+                                Chia sẻ lịch trình
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                —
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                —
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="px-6 py-4">
+                                Quản lý chuyến đi nhóm
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                —
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                —
+                            </td>
+
+                            <td class="px-6 py-4 text-center">
+                                ✓
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="mt-3 text-sm text-muted dark:text-muted-invert lg:hidden">
+                Vuốt ngang để xem hết bảng.
+            </p>
+
+        </section>
+        <!-- CTA -->
+        <section id="cta" class="py-24">
+            <div class="container-main">
+
+                <div class="cta-box">
+
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
+                        SẴN SÀNG CHO HÀNH TRÌNH TIẾP THEO?
+                    </p>
+
+                    <h2 class="max-w-3xl text-4xl font-bold text-white">
+                        Biến ý tưởng chuyến đi thành lịch trình rõ ràng cùng VietTrip.
+                    </h2>
+
+                    <p class="max-w-2xl leading-7 text-brand-100">
+                        Khám phá địa điểm, lên kế hoạch và quản lý hành trình
+                        của bạn trên một nền tảng duy nhất.
+                    </p>
+
+                    <div class="flex flex-col items-center gap-4 sm:flex-row">
+
+                        <a href="#" class="btn bg-white text-brand-900 hover:bg-brand-50">
+                            Bắt đầu miễn phí
+                        </a>
+
+                        <a href="#tinh-nang" class="btn border border-brand-100 text-white hover:bg-brand-700">
+                            Xem tính năng
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="container-main grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+
+            <div>
+                <h3 class="footer-title mb-4">VietTrip</h3>
+
+                <p class="section-description">
+                    Khám phá Việt Nam theo cách của bạn.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Điểm đến</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Hạ Long</a></li>
+                    <li><a href="#" class="footer-link">Đà Lạt</a></li>
+                    <li><a href="#" class="footer-link">Phú Quốc</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Cẩm nang</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Lịch trình</a></li>
+                    <li><a href="#" class="footer-link">Mẹo du lịch</a></li>
+                    <li><a href="#" class="footer-link">Ẩm thực</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Liên hệ</h3>
+
+                <ul class="space-y-2">
+                    <li class="footer-link">viettrip@gmail.com</li>
+                    <li class="footer-link">0123 456 789</li>
+                    <li class="footer-link">Hồ Chí Minh, Việt Nam</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

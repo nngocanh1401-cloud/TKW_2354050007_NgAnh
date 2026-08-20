@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
     --color-brand-50: #f8ffe4;
@@ -15,6 +16,12 @@
     --color-muted: #6f6f6f;
     --color-line: #cfcfcf;
     --color-surface: #f0f0f0;
+    --color-ink-invert: #eaf2ee;
+    --color-muted-invert: #93a8a1;
+    --color-line-invert: #24403a;
+
+    --color-surface-dark: #0e1c19;
+    --color-surface-dark-alt: #14312b;
 
     --font-display: "Be Vietnam Pro", system-ui, sans-serif;
     --font-body: "Manrope", system-ui, sans-serif;
@@ -37,7 +44,7 @@
 
 
     body {
-        @apply font-body text-ink bg-white antialiased;
+        @apply font-body bg-white text-ink antialiased dark:bg-surface-dark dark:text-ink-invert;
     }
 
 
@@ -52,11 +59,11 @@
     }
 
     h2 {
-        @apply font-bold;
+        @apply font-bold text-brand-900 dark:text-white;
     }
 
     h3 {
-        @apply font-semibold;
+        @apply font-semibold text-brand-900 dark:text-white;
     }
 
     a {
@@ -67,7 +74,7 @@
 
 @layer components {
     .container-main {
-        @apply mx-auto w-full max-w-6xl px-5;
+        @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16;
     }
 
 
@@ -82,7 +89,11 @@
 
 
     .btn-secondary {
-        @apply border border-line bg-white text-ink hover:bg-surface;
+        @apply border border-line bg-white text-ink hover:bg-surface dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert dark:hover:bg-surface-dark;
+    }
+
+    .section {
+        @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24;
     }
 
 
@@ -92,21 +103,31 @@
 
 
     .section-title {
-        @apply font-display text-3xl font-bold tracking-tight text-brand-900;
+        @apply font-display text-3xl font-bold tracking-tight text-brand-900 dark:text-ink-invert;
     }
-
 
     .section-description {
-        @apply text-base leading-7 text-muted;
+        @apply text-base leading-7 text-muted dark:text-muted-invert;
     }
 
+    .card-title {
+        @apply text-xl font-semibold text-brand-900 dark:text-ink-invert;
+    }
+
+    .text-muted-theme {
+        @apply text-muted dark:text-muted-invert;
+    }
+
+    .text-ink-theme {
+        @apply text-ink dark:text-ink-invert;
+    }
 
     .card {
-        @apply rounded-card border border-line bg-white p-6;
+        @apply rounded-card border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg dark:border-line-invert dark:bg-surface-dark-alt;
     }
 
     .feature-icon {
-        @apply grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600;
+        @apply grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-surface-dark dark:text-brand-100;
     }
 
     .stat-number {
@@ -114,39 +135,67 @@
     }
 
     .stat-label {
-        @apply order-2 mt-2 text-sm text-muted;
+        @apply order-2 mt-2 text-sm text-muted dark:text-muted-invert;
     }
 
     .avatar {
-        @apply grid h-11 w-11 place-items-center rounded-full bg-brand-50 font-semibold text-brand-600;
+        @apply grid h-11 w-11 place-items-center rounded-full bg-brand-50 font-semibold text-brand-600 dark:bg-surface-dark dark:text-brand-100;
     }
 
     .navbar {
-        @apply sticky top-0 z-50 border-b border-line bg-white;
+        @apply sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur dark:border-line-invert dark:bg-surface-dark/90;
     }
 
     .faq-item {
-        @apply border-b border-line py-5;
+        @apply border-b border-line py-5 dark:border-line-invert;
     }
 
     .faq-question {
-        @apply font-display text-lg font-semibold text-brand-900;
+        @apply font-display text-lg font-semibold text-brand-900 dark:text-ink-invert;
     }
 
     .faq-answer {
-        @apply leading-7 text-muted;
+        @apply leading-7 text-muted dark:text-muted-invert;
     }
 
     .cta-box {
         @apply flex flex-col items-center gap-6 rounded-card bg-brand-900 px-8 py-16 text-center;
     }
 
+    .footer {
+        @apply border-t border-line bg-surface dark:border-line-invert dark:bg-surface-dark-alt;
+    }
+
     .footer-title {
-        @apply text-base font-semibold text-brand-900;
+        @apply text-base font-semibold text-brand-900 dark:text-ink-invert;
     }
 
     .footer-link {
-        @apply text-muted hover:text-brand-600;
+        @apply text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-brand-100;
     }
+
+    .field-label {
+        @apply mb-2 block text-sm font-medium text-brand-900 dark:text-ink-invert;
+    }
+
+    .field-input {
+        @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-ink outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert;
+    }
+
+    .field-textarea {
+        @apply min-h-32 w-full resize-y rounded-lg border border-line bg-white px-4 py-3 text-ink outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert;
+    }
+
+    .field-checkbox {
+        @apply h-5 w-5 rounded border-line text-brand-600 focus:ring-brand-600;
+    }
+
+    .partner-logo {
+        @apply h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0;
+    }
+    .price {
+    @apply font-display text-4xl font-extrabold text-brand-900
+           dark:text-ink-invert;
+}
 
 }

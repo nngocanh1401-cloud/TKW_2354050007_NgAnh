@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>VIETTRIP - Bảng giá </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href="./dist/output.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav aria-label="Điều hướng chính">
+            <div class="container-main flex items-center justify-between py-6">
+
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600">
+                        <span class="font-display text-xl font-bold text-white">V</span>
+                    </div>
+
+                    <span class="font-display text-3xl font-bold text-brand-900 dark:text-ink-invert">
+                        VietTrip
+                    </span>
+                </a>
+
+                <div class="hidden lg:block">
+                    <ul class="flex items-center gap-10 text-base font-medium text-ink dark:text-ink-invert">
+                        <li><a href="index.html" class="hover:text-brand-600">Trang chủ</a></li>
+                        <li><a href="index.html#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
+                        <li><a href="index.html#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
+                        <li><a href="contact.html" class="text-brand-600">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden items-center gap-5 lg:flex">
+                    <a href="#" class="font-medium text-ink hover:text-brand-600 dark:text-ink-invert">
+                        Đăng nhập
+                    </a>
+
+                    <a href="#" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
+                </div>
+
+                <button class="lg:hidden" aria-label="Mở menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- CONTACT HERO -->
+        <section class="section">
+            <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+
+                <p class="eyebrow">
+                    Liên hệ
+                </p>
+
+                <h1
+                    class="font-display text-4xl font-black text-brand-900 dark:text-ink-invert sm:text-5xl lg:text-6xl">
+                    Hãy để VietTrip đồng hành cùng chuyến đi của bạn
+                </h1>
+
+                <p class="section-description max-w-2xl">
+                    Nếu bạn có câu hỏi về tính năng, gói dịch vụ hoặc cần hỗ trợ,
+                    hãy gửi thông tin cho VietTrip.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT CONTENT -->
+        <section class="section pt-0">
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+
+                <!-- Contact Info -->
+                <div class="flex flex-col gap-8">
+
+                    <div class="flex flex-col gap-4">
+                        <p class="eyebrow">
+                            Thông tin liên hệ
+                        </p>
+
+                        <h2 class="section-title">
+                            Chúng tôi luôn sẵn sàng hỗ trợ
+                        </h2>
+
+                        <p class="section-description">
+                            Bạn có thể liên hệ với VietTrip qua email, điện thoại
+                            hoặc gửi trực tiếp biểu mẫu bên cạnh.
+                        </p>
+                    </div>
+
+
+                    <div class="flex flex-col gap-5">
+
+                        <div class="card flex items-start gap-4">
+                            <span class="feature-icon">
+                                @
+                            </span>
+
+                            <div class="flex flex-col gap-1">
+                                <h3 class="card-title">
+                                    Email
+                                </h3>
+
+                                <p class="text-muted-theme">
+                                    viettrip@gmail.com
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="card flex items-start gap-4">
+                            <span class="feature-icon">
+                                ☎
+                            </span>
+
+                            <div class="flex flex-col gap-1">
+                                <h3 class="card-title">
+                                    Điện thoại
+                                </h3>
+
+                                <p class="text-muted-theme">
+                                    0123 456 789
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="card flex items-start gap-4">
+                            <span class="feature-icon">
+                                ⌖
+                            </span>
+
+                            <div class="flex flex-col gap-1">
+                                <h3 class="card-title">
+                                    Địa chỉ
+                                </h3>
+
+                                <p class="text-muted-theme">
+                                    TP. Hồ Chí Minh, Việt Nam
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact Form -->
+                <form class="card flex flex-col gap-6">
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="ho-ten" class="field-label">
+                            Họ và tên
+                            <span class="text-brand-600">*</span>
+                        </label>
+
+                        <input id="ho-ten" name="hoTen" type="text" required autocomplete="name" class="field-input"
+                            placeholder="Nguyễn Văn A">
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="email" class="field-label">
+                            Email
+                            <span class="text-brand-600">*</span>
+                        </label>
+
+                        <input id="email" name="email" type="email" required autocomplete="email" class="field-input"
+                            placeholder="example@gmail.com">
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="dien-thoai" class="field-label">
+                            Số điện thoại
+                            <span class="text-brand-600">*</span>
+                        </label>
+
+                        <input id="dien-thoai" name="dienThoai" type="tel" required pattern="0[0-9]{9}"
+                            autocomplete="tel" inputmode="numeric" class="field-input" placeholder="0912345678">
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="chu-de" class="field-label">
+                            Chủ đề
+                        </label>
+
+                        <select id="chu-de" name="chuDe" class="field-input">
+
+                            <option value="">
+                                Chọn chủ đề
+                            </option>
+
+                            <option value="ho-tro">
+                                Hỗ trợ sử dụng
+                            </option>
+
+                            <option value="bang-gia">
+                                Bảng giá
+                            </option>
+
+                            <option value="tai-khoan">
+                                Tài khoản
+                            </option>
+
+                            <option value="khac">
+                                Khác
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="goi-dich-vu" class="field-label">
+                            Gói đang quan tâm
+                        </label>
+
+                        <select id="goi-dich-vu" name="goiDichVu" class="field-input">
+
+                            <option value="free">
+                                Free
+                            </option>
+
+                            <option value="explorer">
+                                Explorer
+                            </option>
+
+                            <option value="pro">
+                                Pro
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2">
+                        <label for="noi-dung" class="field-label">
+                            Nội dung
+                            <span class="text-brand-600">*</span>
+                        </label>
+
+                        <textarea id="noi-dung" name="noiDung" required class="field-textarea"
+                            placeholder="Nhập nội dung cần hỗ trợ..."></textarea>
+                    </div>
+
+
+                    <label class="flex items-start gap-3">
+
+                        <input type="checkbox" required class="field-checkbox">
+
+                        <span class="text-muted-theme text-sm leading-6">
+                            Tôi đồng ý để VietTrip sử dụng thông tin này nhằm phản hồi yêu cầu hỗ trợ.
+                        </span>
+
+                    </label>
+
+
+                    <button type="submit" class="btn btn-primary w-full">
+
+                        Gửi yêu cầu
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="section">
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.4fr]">
+
+                <div class="flex flex-col gap-4">
+
+                    <p class="eyebrow">
+                        Câu hỏi thường gặp
+                    </p>
+
+                    <h2 class="section-title">
+                        Bạn cần thêm thông tin?
+                    </h2>
+
+                    <p class="section-description">
+                        Một số câu hỏi phổ biến trước khi gửi yêu cầu hỗ trợ.
+                    </p>
+
+                </div>
+
+
+                <div class="flex flex-col">
+
+                    <div class="faq-item flex flex-col gap-3">
+
+                        <h3 class="faq-question">
+                            VietTrip phản hồi trong bao lâu?
+                        </h3>
+
+                        <p class="faq-answer">
+                            Yêu cầu hỗ trợ sẽ được phản hồi sớm nhất có thể qua email bạn cung cấp.
+                        </p>
+
+                    </div>
+
+
+                    <div class="faq-item flex flex-col gap-3">
+
+                        <h3 class="faq-question">
+                            Tôi có thể thay đổi gói dịch vụ sau không?
+                        </h3>
+
+                        <p class="faq-answer">
+                            Có. Bạn có thể nâng cấp gói dịch vụ khi cần thêm tính năng.
+                        </p>
+
+                    </div>
+
+
+                    <div class="faq-item flex flex-col gap-3">
+
+                        <h3 class="faq-question">
+                            Tôi có cần tài khoản để gửi liên hệ không?
+                        </h3>
+
+                        <p class="faq-answer">
+                            Không. Bạn chỉ cần cung cấp đầy đủ thông tin trong biểu mẫu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="section">
+
+            <div class="cta-box">
+
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
+                    BẮT ĐẦU NGAY HÔM NAY
+                </p>
+
+                <h2 class="max-w-3xl text-4xl font-bold text-white">
+                    Sẵn sàng lên kế hoạch cho chuyến đi tiếp theo?
+                </h2>
+
+                <p class="max-w-2xl leading-7 text-brand-100">
+                    Khám phá địa điểm và tạo lịch trình cùng VietTrip.
+                </p>
+
+                <div class="flex flex-col items-center gap-4 sm:flex-row">
+
+                    <a href="index.html#diem-den" class="btn bg-white text-brand-900 hover:bg-brand-50">
+                        Khám phá điểm đến
+                    </a>
+
+                    <a href="pricing.html" class="btn border border-brand-100 text-white hover:bg-brand-700">
+                        Xem bảng giá
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+
+        <div class="container-main grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+
+            <div>
+                <h3 class="footer-title mb-4">VietTrip</h3>
+
+                <p class="section-description">
+                    Khám phá Việt Nam theo cách của bạn.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Điểm đến</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Hạ Long</a></li>
+                    <li><a href="#" class="footer-link">Đà Lạt</a></li>
+                    <li><a href="#" class="footer-link">Phú Quốc</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Cẩm nang</h3>
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link">Lịch trình</a></li>
+                    <li><a href="#" class="footer-link">Mẹo du lịch</a></li>
+                    <li><a href="#" class="footer-link">Ẩm thực</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer-title mb-4">Liên hệ</h3>
+
+                <ul class="space-y-2">
+                    <li class="footer-link">viettrip@gmail.com</li>
+                    <li class="footer-link">0123 456 789</li>
+                    <li class="footer-link">Hồ Chí Minh, Việt Nam</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
