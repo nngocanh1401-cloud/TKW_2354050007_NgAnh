@@ -60,6 +60,39 @@
 
             </div>
         </nav>
+        <div id="mobile-menu"
+            class="hidden border-t border-line bg-white dark:border-line-invert dark:bg-surface-dark lg:hidden">
+
+            <div class="container-main flex flex-col gap-1 py-4">
+
+                <a href="index.html"
+                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                    Trang chủ
+                </a>
+
+                <a href="index.html#diem-den"
+                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                    Điểm đến
+                </a>
+
+                <a href="index.html#tinh-nang"
+                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                    Tính năng
+                </a>
+
+                <a href="pricing.html"
+                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                    Bảng giá
+                </a>
+
+                <a href="contact.html"
+                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                    Liên hệ
+                </a>
+
+            </div>
+
+        </div>
     </header>
 
     <main>
@@ -434,6 +467,18 @@
         </div>
 
     </footer>
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+
+            const isOpen = !mobileMenu.classList.contains("hidden");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+    </script>
 </body>
 
 </html>
