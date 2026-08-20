@@ -16,7 +16,7 @@
     --color-muted: #6f6f6f;
     --color-line: #cfcfcf;
     --color-surface: #f0f0f0;
-    --color-ink-invert: #eaf2ee;
+    --color-ink-invert: #b9d6c9;
     --color-muted-invert: #93a8a1;
     --color-line-invert: #24403a;
 
@@ -89,7 +89,8 @@
 
 
     .btn-secondary {
-        @apply border border-line bg-white text-ink hover:bg-surface dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert dark:hover:bg-surface-dark;
+        @apply border border-line bg-white text-ink hover:bg-surface 
+        dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert dark:hover:bg-surface-dark;
     }
 
     .section {
