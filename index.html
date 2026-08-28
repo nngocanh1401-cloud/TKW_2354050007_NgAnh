@@ -5,22 +5,22 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>VIETTRIP - Lập kế hoạch du lịch Việt Nam</title>
-        <script>
-    (function () {
-        const saved = localStorage.getItem("theme");
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
 
-        const dark = saved
-            ? saved === "dark"
-            : window.matchMedia(
-                "(prefers-color-scheme: dark)"
-            ).matches;
+            const dark = saved
+                ? saved === "dark"
+                : window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
 
-        document.documentElement.classList.toggle(
-            "dark",
-            dark
-        );
-    })();
-</script>
+            document.documentElement.classList.toggle(
+                "dark",
+                dark
+            );
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -93,14 +93,9 @@
 
                 </div>
 
-                <button
-    type="button"
-    data-theme-toggle
-    aria-label="Bật chế độ tối"
-    class="btn btn-secondary"
->
-    🌙
-</button>
+                <button type="button" data-theme-toggle aria-label="Bật chế độ tối" class="btn btn-secondary">
+                    🌙
+                </button>
                 <!-- Desktop Buttons -->
                 <div class="hidden items-center gap-5 lg:flex">
                     <a href="#" class="font-medium text-ink hover:text-brand-600
@@ -114,7 +109,8 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-mobile">
+                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
+                    aria-controls="nav-mobile">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -718,76 +714,165 @@
                         </p>
                     </div>
 
-                    <!-- Right -->
-                    <div>
+<!-- Right -->
+<div>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                VietTrip dùng để làm gì?
-                            </h3>
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+            >
+                VietTrip dùng để làm gì?
+            </button>
+        </h3>
 
-                            <p class="faq-answer">
-                                VietTrip giúp bạn khám phá địa điểm, tạo lịch trình,
-                                lưu nơi yêu thích và quản lý chi phí chuyến đi.
-                            </p>
-                        </div>
+        <div
+            id="faq-answer-1"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                VietTrip giúp bạn khám phá địa điểm,
+                tạo lịch trình, lưu nơi yêu thích và
+                quản lý chi phí chuyến đi.
+            </p>
+        </div>
+    </div>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                Tôi có thể sử dụng VietTrip miễn phí không?
-                            </h3>
 
-                            <p class="faq-answer">
-                                Có. Gói Free cho phép bạn sử dụng những tính năng
-                                cơ bản và tạo tối đa 3 lịch trình.
-                            </p>
-                        </div>
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+            >
+                Tôi có thể sử dụng VietTrip miễn phí không?
+            </button>
+        </h3>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                VietTrip có hỗ trợ đi theo nhóm không?
-                            </h3>
+        <div
+            id="faq-answer-2"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                Có. Gói Free cho phép bạn sử dụng những tính năng
+                cơ bản và tạo tối đa 3 lịch trình.
+            </p>
+        </div>
+    </div>
 
-                            <p class="faq-answer">
-                                Có. Gói Pro hỗ trợ chia sẻ lịch trình và quản lý
-                                chuyến đi theo nhóm.
-                            </p>
-                        </div>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                Tôi có thể theo dõi ngân sách chuyến đi không?
-                            </h3>
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+            >
+                VietTrip có hỗ trợ đi theo nhóm không?
+            </button>
+        </h3>
 
-                            <p class="faq-answer">
-                                Có. Tính năng quản lý chi phí giúp bạn theo dõi
-                                các khoản chi trong hành trình.
-                            </p>
-                        </div>
+        <div
+            id="faq-answer-3"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                Có. Gói Pro hỗ trợ chia sẻ lịch trình
+                và quản lý chuyến đi theo nhóm.
+            </p>
+        </div>
+    </div>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                Có thể lưu địa điểm yêu thích không?
-                            </h3>
 
-                            <p class="faq-answer">
-                                Có. Bạn có thể lưu các địa điểm muốn ghé thăm
-                                để sử dụng khi tạo lịch trình.
-                            </p>
-                        </div>
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+            >
+                Tôi có thể theo dõi ngân sách chuyến đi không?
+            </button>
+        </h3>
 
-                        <div class="faq-item flex flex-col gap-3">
-                            <h3 class="faq-question">
-                                Tôi có thể nâng cấp gói sau không?
-                            </h3>
-                            <p class="faq-answer">
-                                Có. Bạn có thể nâng cấp lên Explorer hoặc Pro
-                                khi cần thêm tính năng.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div
+            id="faq-answer-4"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                Có. Tính năng quản lý chi phí giúp bạn
+                theo dõi các khoản chi trong hành trình.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+            >
+                Có thể lưu địa điểm yêu thích không?
+            </button>
+        </h3>
+
+        <div
+            id="faq-answer-5"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                Có. Bạn có thể lưu các địa điểm muốn ghé thăm
+                để sử dụng khi tạo lịch trình.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+        <h3>
+            <button
+                type="button"
+                class="faq-question w-full text-left"
+                data-faq-trigger
+                aria-expanded="false"
+                aria-controls="faq-answer-6"
+            >
+                Tôi có thể nâng cấp gói sau không?
+            </button>
+        </h3>
+
+        <div
+            id="faq-answer-6"
+            class="faq-answer hidden pt-3"
+        >
+            <p>
+                Có. Bạn có thể nâng cấp lên Explorer hoặc Pro
+                khi cần thêm tính năng.
+            </p>
+        </div>
+    </div>
+</div>
         </section>
         <!-- CTA -->
         <section id="cta" class="py-24">
@@ -880,15 +965,10 @@
             menuButton.setAttribute("aria-expanded", isOpen);
         });
     </script>
-<button
-    id="nut-len-dau"
-    type="button"
-    class="to-top"
-    aria-label="Lên đầu trang"
->
-    ↑
-</button>
-<script type="module" src="./js/main.js"></script>
+    <button id="nut-len-dau" type="button" class="to-top" aria-label="Lên đầu trang">
+        ↑
+    </button>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
