@@ -1,3 +1,5 @@
+// js/nav.js
+
 export function initNav() {
     const toggle = document.querySelector(
         '[aria-controls="nav-mobile"]'
@@ -82,21 +84,16 @@ export function initHeaderOnScroll() {
 }
 
 export function initToTop() {
-  console.log("initToTop đã chạy");
-    const btn = document.getElementById("nut-len-dau");
-    const sentinel = document.getElementById("nav-sentinel");
+    const btn =
+        document.getElementById("nut-len-dau");
+
+    const sentinel =
+        document.getElementById("nav-sentinel");
 
     if (!btn || !sentinel) return;
 
     const observer = new IntersectionObserver(
         ([entry]) => {
-            console.log(
-                "scrollY:",
-                window.scrollY,
-                "isIntersecting:",
-                entry.isIntersecting
-            );
-
             btn.classList.toggle(
                 "is-visible",
                 !entry.isIntersecting
@@ -104,20 +101,29 @@ export function initToTop() {
         },
         {
             rootMargin: "400px 0px 0px 0px",
-            threshold: 0,
         }
     );
 
     observer.observe(sentinel);
 
     btn.addEventListener("click", () => {
-        const reduceMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+        const reduceMotion =
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
 
         window.scrollTo({
             top: 0,
-            behavior: reduceMotion ? "auto" : "smooth",
+            behavior: reduceMotion
+                ? "auto"
+                : "smooth",
         });
+
+        const target =
+            document.querySelector("header a");
+
+        if (target) {
+            target.focus();
+        }
     });
 }

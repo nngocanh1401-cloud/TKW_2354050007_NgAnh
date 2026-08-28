@@ -5,6 +5,22 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>VIETTRIP - Bảng giá </title>
+        <script>
+    (function () {
+        const saved = localStorage.getItem("theme");
+
+        const dark = saved
+            ? saved === "dark"
+            : window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+
+        document.documentElement.classList.toggle(
+            "dark",
+            dark
+        );
+    })();
+</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,6 +56,14 @@
                     </ul>
                 </div>
 
+                                <button
+    type="button"
+    data-theme-toggle
+    aria-label="Bật chế độ tối"
+    class="btn btn-secondary"
+>
+    🌙
+</button> 
                 <div class="hidden items-center gap-5 lg:flex">
                     <a href="#" class="font-medium text-ink hover:text-brand-600 dark:text-ink-invert">
                         Đăng nhập

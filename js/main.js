@@ -1,6 +1,6 @@
 // js/main.js
 import { initNav, initHeaderOnScroll, initToTop } from "./nav.js";
-// import { initTheme } from "./theme.js";
+import { initTheme } from "./theme.js";
 // import { initFaq } from "./faq.js";
 // import { initPricing } from "./pricing.js";
 // import { initSlider } from "./slider.js";
@@ -9,7 +9,7 @@ import { initNav, initHeaderOnScroll, initToTop } from "./nav.js";
 initNav();
 initHeaderOnScroll();
 initToTop();
-// initTheme();
+initTheme();
 // initFaq();
 // initPricing();
 // initSlider();
