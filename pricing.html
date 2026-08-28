@@ -5,22 +5,22 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>VIETTRIP - Bảng giá </title>
-        <script>
-    (function () {
-        const saved = localStorage.getItem("theme");
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
 
-        const dark = saved
-            ? saved === "dark"
-            : window.matchMedia(
-                "(prefers-color-scheme: dark)"
-            ).matches;
+            const dark = saved
+                ? saved === "dark"
+                : window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
 
-        document.documentElement.classList.toggle(
-            "dark",
-            dark
-        );
-    })();
-</script>
+            document.documentElement.classList.toggle(
+                "dark",
+                dark
+            );
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
+    <div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
     <!-- NAVBAR -->
     <header class="navbar">
         <nav aria-label="Điều hướng chính">
@@ -56,14 +56,9 @@
                     </ul>
                 </div>
 
-                                <button
-    type="button"
-    data-theme-toggle
-    aria-label="Bật chế độ tối"
-    class="btn btn-secondary"
->
-    🌙
-</button> 
+                <button type="button" data-theme-toggle aria-label="Bật chế độ tối" class="btn btn-secondary">
+                    🌙
+                </button>
                 <div class="hidden items-center gap-5 lg:flex">
                     <a href="#" class="font-medium text-ink hover:text-brand-600 dark:text-ink-invert">
                         Đăng nhập
@@ -74,13 +69,8 @@
                     </a>
                 </div>
 
-                <button
-    type="button"
-    class="lg:hidden"
-    aria-label="Mở menu"
-    aria-expanded="false"
-    aria-controls="nav-mobile"
->
+                <button type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
+                    aria-controls="nav-mobile">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -149,6 +139,23 @@
         </section>
         <section class="section pt-0">
 
+            <!-- Công tắc tháng / năm -->
+            <div class="mb-10 flex items-center justify-center gap-4">
+                <span class="text-muted-theme">
+                    Theo tháng
+                </span>
+
+                <button type="button" role="switch" aria-checked="false" data-pricing-switch class="rounded-full bg-line px-5 py-2
+                   aria-checked:bg-brand-600
+                   aria-checked:text-white">
+                    🔁
+                </button>
+
+                <span class="text-muted-theme">
+                    Theo năm
+                </span>
+            </div>
+
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
                 <article class="card flex h-full flex-col justify-between gap-8">
@@ -166,8 +173,13 @@
                         </div>
 
                         <div>
-                            <span class="price">0đ</span>
-                            <span class="text-muted-theme">/ tháng</span>
+                            <span class="price" data-price data-monthly="0" data-yearly="0">
+                                0 ₫
+                            </span>
+
+                            <span data-price-period class="text-muted-theme">
+                                / tháng
+                            </span>
                         </div>
 
                         <ul class="text-muted-theme flex flex-col gap-3">
@@ -206,11 +218,11 @@
                     </div>
 
                     <div>
-                        <span class="price">
-                            99.000đ
+                        <span class="price" data-price data-monthly="99000" data-yearly="1088000">
+                            99.000 ₫
                         </span>
 
-                        <span class="text-muted-theme">
+                        <span data-price-period class="text-muted-theme">
                             / tháng
                         </span>
                     </div>
@@ -244,11 +256,11 @@
                     </div>
 
                     <div>
-                        <span class="price">
-                            199.000đ
+                        <span class="price" data-price data-monthly="199000" data-yearly="2288000">
+                            199.000 ₫
                         </span>
 
-                        <span class="text-muted-theme">
+                        <span data-price-period class="text-muted-theme">
                             / tháng
                         </span>
                     </div>
@@ -498,15 +510,10 @@
 
     </footer>
 
-    <button
-    id="nut-len-dau"
-    type="button"
-    class="to-top"
-    aria-label="Lên đầu trang"
->
-    ↑
-</button>
-<script type="module" src="./js/main.js"></script>
+    <button id="nut-len-dau" type="button" class="to-top" aria-label="Lên đầu trang">
+        ↑
+    </button>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

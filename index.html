@@ -207,7 +207,7 @@
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
                 <!-- Card 1 -->
-                <article class="card overflow-hidden p-0">
+                <article class="card overflow-hidden p-0" data-reveal>
                     <img src="./assets/img/halong.jpg" alt="Hạ Long" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
@@ -222,7 +222,7 @@
                 </article>
 
                 <!-- Card 2 -->
-                <article class="card overflow-hidden p-0">
+                <article class="card overflow-hidden p-0" data-reveal>
                     <img src="./assets/img/danang.webp" alt="Đà Nẵng" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
@@ -237,7 +237,7 @@
                 </article>
 
                 <!-- Card 3 -->
-                <article class="card overflow-hidden p-0">
+                <article class="card overflow-hidden p-0" data-reveal>
                     <img src="./assets/img/hoian.jpg" alt="Hội An" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
@@ -274,7 +274,7 @@
                 <!-- Feature Grid -->
                 <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <!-- Feature 1 -->
-                    <li class="card">
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
                             <span class="feature-icon">
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -296,7 +296,7 @@
                         </article>
                     </li>
                     <!-- Feature 2 -->
-                    <li class="card">
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
                             <span class="feature-icon">
@@ -318,7 +318,7 @@
                         </article>
                     </li>
                     <!-- Feature 3 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
                             <span class="feature-icon">
@@ -341,7 +341,7 @@
                         </article>
                     </li>
                     <!-- Feature 4 -->
-                    <li class="card">
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
                             <span class="feature-icon">
@@ -360,7 +360,7 @@
                         </article>
                     </li>
                     <!-- Feature 5 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
                             <span class="feature-icon">
@@ -377,7 +377,7 @@
                         </article>
                     </li>
                     <!-- Feature 6 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
                             <span class="feature-icon">
@@ -417,7 +417,7 @@
                 <ul class="mt-14 grid gap-6 lg:grid-cols-3">
 
                     <!-- Review 1 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <figure class="flex h-full flex-col gap-6">
 
                             <blockquote class="leading-7 text-muted">
@@ -447,7 +447,7 @@
                         </figure>
                     </li>
                     <!-- Review 2 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <figure class="flex h-full flex-col gap-6">
 
                             <blockquote class="leading-7 text-muted">
@@ -476,7 +476,7 @@
                         </figure>
                     </li>
                     <!-- Review 3 -->
-                    <li class="card">
+                    <li class="card"  data-reveal>
                         <figure class="flex h-full flex-col gap-6">
 
                             <blockquote class="leading-7 text-muted">
@@ -592,6 +592,20 @@
                     </p>
 
                 </div>
+                <div class="mt-8 flex items-center gap-4">
+                    <span class="text-muted-theme">
+                        Theo tháng
+                    </span>
+
+                    <button type="button" role="switch" aria-checked="false" data-pricing-switch
+                        class="btn btn-secondary">
+                        🔁
+                    </button>
+
+                    <span class="text-muted-theme">
+                        Theo năm
+                    </span>
+                </div>
                 <ul class="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
 
                     <!-- FREE -->
@@ -606,9 +620,11 @@
                             </p>
                         </div>
                         <div>
-                            <span class="price">0đ</span>
+                            <span class="price" data-price data-monthly="0" data-yearly="0">
+                                0 ₫
+                            </span>
 
-                            <span class="text-muted">
+                            <span class="text-muted" data-price-period>
                                 / tháng
                             </span>
                         </div>
@@ -638,10 +654,11 @@
                             </p>
                         </div>
                         <div>
-                            <span class="price">
-                                99.000đ
+                            <span class="price" data-price data-monthly="99000" data-yearly="1188000">
+                                99.000 ₫
                             </span>
-                            <span class="text-muted">
+
+                            <span class="text-muted" data-price-period>
                                 / tháng
                             </span>
                         </div>
@@ -669,11 +686,11 @@
                         </div>
 
                         <div>
-                            <span class="price">
-                                199.000đ
+                            <span class="price" data-price data-monthly="199000" data-yearly="2388000">
+                                199.000 ₫
                             </span>
 
-                            <span class="text-muted">
+                            <span class="text-muted" data-price-period>
                                 / tháng
                             </span>
                         </div>
@@ -714,165 +731,117 @@
                         </p>
                     </div>
 
-<!-- Right -->
-<div>
+                    <!-- Right -->
+                    <div>
 
-    <!-- FAQ 1 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-1"
-            >
-                VietTrip dùng để làm gì?
-            </button>
-        </h3>
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-1">
+                                    VietTrip dùng để làm gì?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-1"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                VietTrip giúp bạn khám phá địa điểm,
-                tạo lịch trình, lưu nơi yêu thích và
-                quản lý chi phí chuyến đi.
-            </p>
-        </div>
-    </div>
+                            <div id="faq-answer-1" class="faq-answer hidden pt-3">
+                                <p>
+                                    VietTrip giúp bạn khám phá địa điểm,
+                                    tạo lịch trình, lưu nơi yêu thích và
+                                    quản lý chi phí chuyến đi.
+                                </p>
+                            </div>
+                        </div>
 
 
-    <!-- FAQ 2 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-2"
-            >
-                Tôi có thể sử dụng VietTrip miễn phí không?
-            </button>
-        </h3>
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-2">
+                                    Tôi có thể sử dụng VietTrip miễn phí không?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-2"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                Có. Gói Free cho phép bạn sử dụng những tính năng
-                cơ bản và tạo tối đa 3 lịch trình.
-            </p>
-        </div>
-    </div>
+                            <div id="faq-answer-2" class="faq-answer hidden pt-3">
+                                <p>
+                                    Có. Gói Free cho phép bạn sử dụng những tính năng
+                                    cơ bản và tạo tối đa 3 lịch trình.
+                                </p>
+                            </div>
+                        </div>
 
 
-    <!-- FAQ 3 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-3"
-            >
-                VietTrip có hỗ trợ đi theo nhóm không?
-            </button>
-        </h3>
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-3">
+                                    VietTrip có hỗ trợ đi theo nhóm không?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-3"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                Có. Gói Pro hỗ trợ chia sẻ lịch trình
-                và quản lý chuyến đi theo nhóm.
-            </p>
-        </div>
-    </div>
+                            <div id="faq-answer-3" class="faq-answer hidden pt-3">
+                                <p>
+                                    Có. Gói Pro hỗ trợ chia sẻ lịch trình
+                                    và quản lý chuyến đi theo nhóm.
+                                </p>
+                            </div>
+                        </div>
 
 
-    <!-- FAQ 4 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-4"
-            >
-                Tôi có thể theo dõi ngân sách chuyến đi không?
-            </button>
-        </h3>
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-4">
+                                    Tôi có thể theo dõi ngân sách chuyến đi không?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-4"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                Có. Tính năng quản lý chi phí giúp bạn
-                theo dõi các khoản chi trong hành trình.
-            </p>
-        </div>
-    </div>
+                            <div id="faq-answer-4" class="faq-answer hidden pt-3">
+                                <p>
+                                    Có. Tính năng quản lý chi phí giúp bạn
+                                    theo dõi các khoản chi trong hành trình.
+                                </p>
+                            </div>
+                        </div>
 
 
-    <!-- FAQ 5 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-5"
-            >
-                Có thể lưu địa điểm yêu thích không?
-            </button>
-        </h3>
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-5">
+                                    Có thể lưu địa điểm yêu thích không?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-5"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                Có. Bạn có thể lưu các địa điểm muốn ghé thăm
-                để sử dụng khi tạo lịch trình.
-            </p>
-        </div>
-    </div>
+                            <div id="faq-answer-5" class="faq-answer hidden pt-3">
+                                <p>
+                                    Có. Bạn có thể lưu các địa điểm muốn ghé thăm
+                                    để sử dụng khi tạo lịch trình.
+                                </p>
+                            </div>
+                        </div>
 
 
-    <!-- FAQ 6 -->
-    <div class="faq-item">
-        <h3>
-            <button
-                type="button"
-                class="faq-question w-full text-left"
-                data-faq-trigger
-                aria-expanded="false"
-                aria-controls="faq-answer-6"
-            >
-                Tôi có thể nâng cấp gói sau không?
-            </button>
-        </h3>
+                        <!-- FAQ 6 -->
+                        <div class="faq-item">
+                            <h3>
+                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                    aria-expanded="false" aria-controls="faq-answer-6">
+                                    Tôi có thể nâng cấp gói sau không?
+                                </button>
+                            </h3>
 
-        <div
-            id="faq-answer-6"
-            class="faq-answer hidden pt-3"
-        >
-            <p>
-                Có. Bạn có thể nâng cấp lên Explorer hoặc Pro
-                khi cần thêm tính năng.
-            </p>
-        </div>
-    </div>
-</div>
+                            <div id="faq-answer-6" class="faq-answer hidden pt-3">
+                                <p>
+                                    Có. Bạn có thể nâng cấp lên Explorer hoặc Pro
+                                    khi cần thêm tính năng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
         </section>
         <!-- CTA -->
         <section id="cta" class="py-24">

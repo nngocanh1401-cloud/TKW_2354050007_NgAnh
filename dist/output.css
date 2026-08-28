@@ -270,6 +270,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
   }
@@ -471,6 +474,9 @@
   .bg-brand-600 {
     background-color: var(--color-brand-600);
   }
+  .bg-line {
+    background-color: var(--color-line);
+  }
   .bg-surface {
     background-color: var(--color-surface);
   }
@@ -492,11 +498,17 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
   .py-1 {
     padding-block: var(--spacing);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -661,6 +673,12 @@
     .hover\:text-brand-600:hover {
       color: var(--color-brand-600);
     }
+  }
+  .aria-checked\:bg-brand-600[aria-checked="true"] {
+    background-color: var(--color-brand-600);
+  }
+  .aria-checked\:text-white[aria-checked="true"] {
+    color: var(--color-white);
   }
   @media (width >= 40rem) {
     .sm\:grid-cols-2 {
@@ -1290,6 +1308,15 @@
   .to-top.is-visible {
     pointer-events: auto;
     opacity: 100%;
+  }
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 500ms ease, transform 500ms ease;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @property --tw-space-y-reverse {
