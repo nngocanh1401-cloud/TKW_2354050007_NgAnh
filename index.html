@@ -32,7 +32,7 @@
 <body>
     <div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
     <!-- NAVBAR  -->
-    <header class="navbar">
+    <header class="sticky top-0 z-50 border-b border-line-theme bg-page/90 backdrop-blur">
         <nav aria-label="Điều hướng chính">
             <div class="container-main flex items-center justify-between py-6">
 
@@ -42,16 +42,14 @@
                         <span class="font-display text-xl font-bold text-white">V</span>
                     </div>
 
-                    <span class="font-display text-3xl font-bold
-           text-brand-900 dark:text-ink-invert">
+<span class="font-display text-3xl font-bold text-heading-theme">
                         VietTrip
                     </span>
                 </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:block">
-                    <ul class="flex items-center gap-10 text-base font-medium
-                                text-ink dark:text-ink-invert">
+<ul class="flex items-center gap-10 text-base font-medium text-text-theme">
                         <li><a href="#" class="hover:text-brand-600">Trang chủ</a></li>
                         <li><a href="#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
                         <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
@@ -59,33 +57,36 @@
                         <li><a href="contact.html" class="hover:text-brand-600">Liên hệ</a></li>
                     </ul>
                 </nav>
-                <div id="nav-mobile"
-                    class="hidden border-t border-line bg-white dark:border-line-invert dark:bg-surface-dark lg:hidden">
+<div
+    id="nav-mobile"
+    class="hidden border-t border-line-theme
+           bg-page lg:hidden"
+>
 
                     <div class="container-main flex flex-col gap-1 py-4">
 
                         <a href="index.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Trang chủ
                         </a>
 
                         <a href="index.html#diem-den"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Điểm đến
                         </a>
 
                         <a href="index.html#tinh-nang"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Tính năng
                         </a>
 
                         <a href="pricing.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Bảng giá
                         </a>
 
                         <a href="contact.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface dark:hover:bg-surface-dark-alt">
+                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Liên hệ
                         </a>
 
@@ -98,8 +99,7 @@
                 </button>
                 <!-- Desktop Buttons -->
                 <div class="hidden items-center gap-5 lg:flex">
-                    <a href="#" class="font-medium text-ink hover:text-brand-600
-           dark:text-ink-invert dark:hover:text-brand-100">
+                    <a href="#" class="font-medium text-text-theme hover:text-brand-600"
                         Đăng nhập
                     </a>
 
@@ -112,7 +112,7 @@
                 <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
                     aria-controls="nav-mobile">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
@@ -129,18 +129,18 @@
 
             <div class="space-y-8">
 
-                <p class="eyebrow">
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                     Khám phá Việt Nam theo cách của bạn
                 </p>
 
                 <h1 class="font-display text-5xl leading-none font-black
-           text-brand-900 dark:text-ink-invert
+           text-heading-theme
            sm:text-6xl lg:text-7xl">
                     Lên kế hoạch cho những chuyến đi đáng nhớ.
                 </h1>
 
                 <p class="max-w-xl text-lg leading-8
-           text-muted dark:text-muted-invert
+          text-muted-theme
            sm:text-xl">
                     VietTrip giúp bạn khám phá những địa điểm đẹp nhất tại Việt Nam, xây dựng lịch trình và quản lý
                     chuyến đi một cách đơn giản trên một nền tảng duy nhất.
@@ -175,24 +175,24 @@
 
             <div class="grid grid-cols-2 items-center gap-8 opacity-70 sm:grid-cols-3 lg:grid-cols-6">
 
-                <img src="./assets/logo/vietnam-airlines.svg" alt="Vietnam Airlines" class="partner-logo mx-auto">
+                <img src="./assets/logo/vietnam-airlines.svg" alt="Vietnam Airlines" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/booking.svg" alt="Booking.com" class="partner-logo mx-auto">
+                <img src="./assets/logo/booking.svg" alt="Booking.com" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/agoda.svg" alt="Agoda" class="partner-logo mx-auto">
+                <img src="./assets/logo/agoda.svg" alt="Agoda" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/traveloka.svg" alt="Traveloka" class="partner-logo mx-auto">
+                <img src="./assets/logo/traveloka.svg" alt="Traveloka" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/vietjet.svg" alt="Vietjet Air" class="partner-logo mx-auto">
+                <img src="./assets/logo/vietjet.svg" alt="Vietjet Air" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/airbnb.svg" alt="Airbnb" class="partner-logo mx-auto">
+                <img src="./assets/logo/airbnb.svg" alt="Airbnb" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
             </div>
         </section>
         <section id="diem-den" class="container-main py-20">
 
             <div class="mb-12 text-center">
-                <p class="eyebrow">Điểm đến nổi bật</p>
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">Điểm đến nổi bật</p>
 
                 <h2 class="section-title mt-3">
                     Khám phá những nơi đẹp nhất Việt Nam
@@ -211,7 +211,7 @@
                     <img src="./assets/img/halong.jpg" alt="Hạ Long" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
-                        <h3 class="card-title">
+                        <h3 class="text-xl font-semibold text-heading-theme">
                             Vịnh Hạ Long
                         </h3>
 
@@ -226,7 +226,7 @@
                     <img src="./assets/img/danang.webp" alt="Đà Nẵng" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
-                        <h3 class="card-title">
+                        <h3 class="text-xl font-semibold text-heading-theme">
                             Đà Nẵng
                         </h3>
 
@@ -241,7 +241,7 @@
                     <img src="./assets/img/hoian.jpg" alt="Hội An" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
-                        <h3 class="card-title">
+                        <h3 class="text-xl font-semibold text-heading-theme">
                             Hội An
                         </h3>
 
@@ -260,7 +260,7 @@
             <div class="container-main">
                 <!-- Section Heading -->
                 <div class="flex max-w-2xl flex-col gap-4">
-                    <p class="eyebrow">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                         TÍNH NĂNG
                     </p>
                     <h2 class="section-title">
@@ -276,7 +276,10 @@
                     <!-- Feature 1 -->
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -299,7 +302,10 @@
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
 
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
@@ -321,7 +327,10 @@
                     <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
 
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
@@ -344,7 +353,10 @@
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
                                 <span aria-hidden="true">♥</span>
                             </span>
 
@@ -363,7 +375,10 @@
                     <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
                                 <span aria-hidden="true">↗</span>
                             </span>
 
@@ -380,7 +395,10 @@
                     <li class="card"  data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span class="feature-icon">
+                            <span
+    class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600"
+>
                                 <span aria-hidden="true">★</span>
                             </span>
 
@@ -401,7 +419,7 @@
             <div class="container-main">
 
                 <div class="flex max-w-2xl flex-col gap-4">
-                    <p class="eyebrow">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                         CẢM NHẬN
                     </p>
 
@@ -414,98 +432,157 @@
                         để lên kế hoạch cho hành trình của mình.
                     </p>
                 </div>
-                <ul class="mt-14 grid gap-6 lg:grid-cols-3">
+ <div
+    id="testimonial-slider"
+    class="mt-14 overflow-hidden"
+>
+    <div
+        data-slider-track
+        class="flex transition-transform duration-500"
+    >
 
-                    <!-- Review 1 -->
-                    <li class="card"  data-reveal>
-                        <figure class="flex h-full flex-col gap-6">
+        <!-- Review 1 -->
+        <article
+            data-slide
+            class="w-full shrink-0"
+        >
+            <div class="card">
+                <figure class="flex h-full flex-col gap-6">
 
-                            <blockquote class="leading-7 text-muted">
-                                “Trước đây mình mất rất nhiều thời gian để tìm địa điểm
-                                và sắp xếp lịch trình. VietTrip giúp mọi thứ trở nên
-                                rõ ràng và dễ quản lý hơn rất nhiều.”
-                            </blockquote>
+                    <blockquote class="leading-7 text-muted">
+                        “Trước đây mình mất rất nhiều thời gian để tìm địa điểm
+                        và sắp xếp lịch trình. VietTrip giúp mọi thứ trở nên
+                        rõ ràng và dễ quản lý hơn rất nhiều.”
+                    </blockquote>
 
-                            <figcaption class="flex items-center gap-3">
+                    <figcaption class="flex items-center gap-3">
 
-                                <div class="avatar">
-                                    MA
-                                </div>
+                        <div
+    class="grid h-11 w-11 place-items-center
+           rounded-full bg-surface-theme
+           font-semibold text-brand-600"
+>                            MA
+                        </div>
 
-                                <div class="flex flex-col">
-                                    <span class="font-semibold text-ink-theme">
-                                        Minh Anh
-                                    </span>
+                        <div class="flex flex-col">
+                            <span class="font-semibold text-text-theme">
+                                Minh Anh
+                            </span>
 
-                                    <cite class="text-sm not-italic text-muted">
-                                        Du khách tự túc
-                                    </cite>
-                                </div>
+                            <cite class="text-sm not-italic text-muted">
+                                Du khách tự túc
+                            </cite>
+                        </div>
 
-                            </figcaption>
+                    </figcaption>
 
-                        </figure>
-                    </li>
-                    <!-- Review 2 -->
-                    <li class="card"  data-reveal>
-                        <figure class="flex h-full flex-col gap-6">
+                </figure>
+            </div>
+        </article>
 
-                            <blockquote class="leading-7 text-muted">
-                                “Mình thích nhất tính năng theo dõi chi phí vì nhóm bạn
-                                có thể biết trước chuyến đi sẽ tốn khoảng bao nhiêu.”
-                            </blockquote>
+        <!-- Review 2 -->
+        <article
+            data-slide
+            class="w-full shrink-0"
+        >
+            <div class="card">
+                <figure class="flex h-full flex-col gap-6">
 
-                            <figcaption class="flex items-center gap-3">
+                    <blockquote class="leading-7 text-muted">
+                        “Mình thích nhất tính năng theo dõi chi phí vì nhóm bạn
+                        có thể biết trước chuyến đi sẽ tốn khoảng bao nhiêu.”
+                    </blockquote>
 
-                                <div class="avatar">
-                                    QB
-                                </div>
+                    <figcaption class="flex items-center gap-3">
 
-                                <div class="flex flex-col">
-                                    <span class="font-semibold text-ink-theme">
-                                        Quốc Bảo
-                                    </span>
+                        <div
+    class="grid h-11 w-11 place-items-center
+           rounded-full bg-surface-theme
+           font-semibold text-brand-600"
+>                            QB
+                        </div>
 
-                                    <cite class="text-sm not-italic text-muted-theme">
-                                        Travel Blogger
-                                    </cite>
-                                </div>
+                        <div class="flex flex-col">
+                            <span class="font-semibold text-text-theme">
+                                Quốc Bảo
+                            </span>
 
-                            </figcaption>
+                            <cite class="text-sm not-italic text-muted-theme">
+                                Travel Blogger
+                            </cite>
+                        </div>
 
-                        </figure>
-                    </li>
-                    <!-- Review 3 -->
-                    <li class="card"  data-reveal>
-                        <figure class="flex h-full flex-col gap-6">
+                    </figcaption>
 
-                            <blockquote class="leading-7 text-muted">
-                                “Nhóm mình dùng VietTrip để cùng lên kế hoạch cho chuyến
-                                đi Đà Nẵng và Hội An. Mọi người dễ theo dõi hơn hẳn.”
-                            </blockquote>
+                </figure>
+            </div>
+        </article>
 
-                            <figcaption class="flex items-center gap-3">
+        <!-- Review 3 -->
+        <article
+            data-slide
+            class="w-full shrink-0"
+        >
+            <div class="card">
+                <figure class="flex h-full flex-col gap-6">
 
-                                <div class="avatar">
-                                    TH
-                                </div>
+                    <blockquote class="leading-7 text-muted">
+                        “Nhóm mình dùng VietTrip để cùng lên kế hoạch cho chuyến
+                        đi Đà Nẵng và Hội An. Mọi người dễ theo dõi hơn hẳn.”
+                    </blockquote>
 
-                                <div class="flex flex-col">
-                                    <span class="font-semibold text-ink-theme">
-                                        Thu Hà
-                                    </span>
+                    <figcaption class="flex items-center gap-3">
 
-                                    <cite class="text-sm not-italic text-muted">
-                                        Nhóm trẻ du lịch
-                                    </cite>
-                                </div>
+                        <div
+    class="grid h-11 w-11 place-items-center
+           rounded-full bg-surface-theme
+           font-semibold text-brand-600"
+>                            TH
+                        </div>
 
-                            </figcaption>
+                        <div class="flex flex-col">
+                            <span class="font-semibold text-text-theme">
+                                Thu Hà
+                            </span>
 
-                        </figure>
-                    </li>
+                            <cite class="text-sm not-italic text-muted">
+                                Nhóm trẻ du lịch
+                            </cite>
+                        </div>
 
-                </ul>
+                    </figcaption>
+
+                </figure>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="mt-6 flex items-center justify-between">
+
+        <button
+            type="button"
+            data-slider-prev
+            class="btn btn-secondary"
+        >
+            ⬅
+        </button>
+
+        <div
+            data-slider-dots
+            class="flex gap-2"
+        ></div>
+
+        <button
+            type="button"
+            data-slider-next
+            class="btn btn-secondary"
+        >
+            ➡
+        </button>
+
+    </div>
+</div>
 
             </div>
         </section>
@@ -514,7 +591,7 @@
             <div class="container-main">
 
                 <div class="flex max-w-2xl flex-col gap-4">
-                    <p class="eyebrow">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                         VIETTRIP TRONG NHỮNG CON SỐ
                     </p>
 
@@ -530,41 +607,41 @@
                 <dl class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-line">
 
                     <div class="flex flex-col items-center px-6 text-center">
-                        <dt class="stat-label">
+                        <dt class="order-2 mt-2 text-sm text-muted-theme">
                             Tỉnh thành
                         </dt>
 
-                        <dd class="stat-number">
-                            34
-                        </dd>
+<dd class="font-display text-4xl font-extrabold text-brand-600">
+    34
+</dd>
                     </div>
 
                     <div class="flex flex-col items-center px-6 text-center">
-                        <dt class="stat-label">
+                        <dt class="order-2 mt-2 text-sm text-muted-theme">
                             Địa điểm nổi bật
                         </dt>
 
-                        <dd class="stat-number">
+                        <dd class="font-display text-4xl font-extrabold text-brand-600">
                             500+
                         </dd>
                     </div>
 
                     <div class="flex flex-col items-center px-6 text-center">
-                        <dt class="stat-label">
+                        <dt class="order-2 mt-2 text-sm text-muted-theme">
                             Lịch trình được tạo
                         </dt>
 
-                        <dd class="stat-number">
+                        <dd class="font-display text-4xl font-extrabold text-brand-600">
                             10K+
                         </dd>
                     </div>
 
                     <div class="flex flex-col items-center px-6 text-center">
-                        <dt class="stat-label">
+                        <dt class="order-2 mt-2 text-sm text-muted-theme">
                             Đánh giá trung bình
                         </dt>
 
-                        <dd class="stat-number">
+                        <dd class="font-display text-4xl font-extrabold text-brand-600">
                             4.9/5
                         </dd>
                     </div>
@@ -578,7 +655,7 @@
 
                 <div class="flex max-w-2xl flex-col gap-4">
 
-                    <p class="eyebrow">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                         BẢNG GIÁ
                     </p>
 
@@ -620,7 +697,7 @@
                             </p>
                         </div>
                         <div>
-                            <span class="price" data-price data-monthly="0" data-yearly="0">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="0" data-yearly="0">
                                 0 ₫
                             </span>
 
@@ -654,7 +731,7 @@
                             </p>
                         </div>
                         <div>
-                            <span class="price" data-price data-monthly="99000" data-yearly="1188000">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="99000" data-yearly="1188000">
                                 99.000 ₫
                             </span>
 
@@ -686,7 +763,7 @@
                         </div>
 
                         <div>
-                            <span class="price" data-price data-monthly="199000" data-yearly="2388000">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="199000" data-yearly="2388000">
                                 199.000 ₫
                             </span>
 
@@ -717,7 +794,7 @@
 
                     <!-- Left -->
                     <div class="flex flex-col gap-4">
-                        <p class="eyebrow">
+                        <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
                             CÂU HỎI THƯỜNG GẶP
                         </p>
 
@@ -735,15 +812,16 @@
                     <div>
 
                         <!-- FAQ 1 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-1">
                                     VietTrip dùng để làm gì?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-1" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-1" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     VietTrip giúp bạn khám phá địa điểm,
                                     tạo lịch trình, lưu nơi yêu thích và
@@ -754,15 +832,16 @@
 
 
                         <!-- FAQ 2 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-2">
                                     Tôi có thể sử dụng VietTrip miễn phí không?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-2" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-2" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     Có. Gói Free cho phép bạn sử dụng những tính năng
                                     cơ bản và tạo tối đa 3 lịch trình.
@@ -772,15 +851,16 @@
 
 
                         <!-- FAQ 3 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-3">
                                     VietTrip có hỗ trợ đi theo nhóm không?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-3" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-3" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     Có. Gói Pro hỗ trợ chia sẻ lịch trình
                                     và quản lý chuyến đi theo nhóm.
@@ -790,15 +870,16 @@
 
 
                         <!-- FAQ 4 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-4">
                                     Tôi có thể theo dõi ngân sách chuyến đi không?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-4" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-4" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     Có. Tính năng quản lý chi phí giúp bạn
                                     theo dõi các khoản chi trong hành trình.
@@ -808,15 +889,16 @@
 
 
                         <!-- FAQ 5 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-5">
                                     Có thể lưu địa điểm yêu thích không?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-5" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-5" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     Có. Bạn có thể lưu các địa điểm muốn ghé thăm
                                     để sử dụng khi tạo lịch trình.
@@ -826,15 +908,16 @@
 
 
                         <!-- FAQ 6 -->
-                        <div class="faq-item">
+                        <div class="border-b border-line-theme py-5">
                             <h3>
-                                <button type="button" class="faq-question w-full text-left" data-faq-trigger
+                                <button type="button" class="w-full text-left font-display
+       text-lg font-semibold text-heading-theme" data-faq-trigger
                                     aria-expanded="false" aria-controls="faq-answer-6">
                                     Tôi có thể nâng cấp gói sau không?
                                 </button>
                             </h3>
 
-                            <div id="faq-answer-6" class="faq-answer hidden pt-3">
+                            <div id="faq-answer-6" class="hidden pt-3 leading-7 text-muted-theme">
                                 <p>
                                     Có. Bạn có thể nâng cấp lên Explorer hoặc Pro
                                     khi cần thêm tính năng.
@@ -847,7 +930,11 @@
         <section id="cta" class="py-24">
             <div class="container-main">
 
-                <div class="cta-box">
+                <div
+    class="flex flex-col items-center gap-6
+           rounded-card bg-brand-900
+           px-8 py-16 text-center"
+>
 
                     <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
                         SẴN SÀNG CHO HÀNH TRÌNH TIẾP THEO?
@@ -876,12 +963,12 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="border-t border-line-theme bg-surface-theme">
 
         <div class="container-main grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
 
             <div>
-                <h3 class="footer-title mb-4">VietTrip</h3>
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">VietTrip</h3>
 
                 <p class="section-description">
                     Khám phá Việt Nam theo cách của bạn.
@@ -889,51 +976,38 @@
             </div>
 
             <div>
-                <h3 class="footer-title mb-4">Điểm đến</h3>
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">Điểm đến</h3>
 
                 <ul class="space-y-2">
-                    <li><a href="#" class="footer-link">Hạ Long</a></li>
-                    <li><a href="#" class="footer-link">Đà Lạt</a></li>
-                    <li><a href="#" class="footer-link">Phú Quốc</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Hạ Long</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Đà Lạt</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Phú Quốc</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="footer-title mb-4">Cẩm nang</h3>
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">Cẩm nang</h3>
 
                 <ul class="space-y-2">
-                    <li><a href="#" class="footer-link">Lịch trình</a></li>
-                    <li><a href="#" class="footer-link">Mẹo du lịch</a></li>
-                    <li><a href="#" class="footer-link">Ẩm thực</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Lịch trình</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Mẹo du lịch</a></li>
+                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Ẩm thực</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="footer-title mb-4">Liên hệ</h3>
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">Liên hệ</h3>
 
                 <ul class="space-y-2">
-                    <li class="footer-link">viettrip@gmail.com</li>
-                    <li class="footer-link">0123 456 789</li>
-                    <li class="footer-link">Hồ Chí Minh, Việt Nam</li>
+                    <li class="text-muted-theme hover:text-brand-600">viettrip@gmail.com</li>
+                    <li class="text-muted-theme hover:text-brand-600">0123 456 789</li>
+                    <li class="text-muted-theme hover:text-brand-600">Hồ Chí Minh, Việt Nam</li>
                 </ul>
             </div>
 
         </div>
 
     </footer>
-
-    <script>
-        const menuButton = document.getElementById("menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
-
-            const isOpen = !mobileMenu.classList.contains("hidden");
-
-            menuButton.setAttribute("aria-expanded", isOpen);
-        });
-    </script>
     <button id="nut-len-dau" type="button" class="to-top" aria-label="Lên đầu trang">
         ↑
     </button>

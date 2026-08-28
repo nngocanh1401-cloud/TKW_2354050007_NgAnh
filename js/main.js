@@ -4,7 +4,7 @@ import { initTheme } from "./theme.js";
 import { initFaq } from "./faq.js";
 import { initPricing } from "./pricing.js";
 import { initReveal } from "./reveal.js";
-// import { initSlider } from "./slider.js";
+import { initSlider } from "./slider.js";
 
 
 initNav();
@@ -14,5 +14,5 @@ initTheme();
 initFaq();
 initPricing();
 initReveal();
-// initSlider();
+initSlider();
 

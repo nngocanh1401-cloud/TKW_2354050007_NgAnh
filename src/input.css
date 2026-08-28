@@ -1,5 +1,28 @@
 @import "tailwindcss";
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --ui-page: #ffffff;
+    --ui-surface: #f0f0f0;
+    --ui-surface-alt: #ffffff;
+
+    --ui-text: #4c4c4c;
+    --ui-muted: #6f6f6f;
+    --ui-heading: #395b0c;
+    --ui-line: #cfcfcf;
+}
+
+.dark {
+    --ui-page: #0e1c19;
+    --ui-surface: #14312b;
+    --ui-surface-alt: #14312b;
+
+    --ui-text: #b9d6c9;
+    --ui-muted: #93a8a1;
+    --ui-heading: #b9d6c9;
+    --ui-line: #24403a;
+}
 
 @theme {
     --color-brand-50: #f8ffe4;
@@ -12,28 +35,21 @@
     --color-accent-400: #ffc715;
     --color-accent-500: #f9a907;
 
-    --color-ink: #4c4c4c;
-    --color-muted: #6f6f6f;
-    --color-line: #cfcfcf;
-    --color-surface: #f0f0f0;
-    --color-ink-invert: #b9d6c9;
-    --color-muted-invert: #93a8a1;
-    --color-line-invert: #24403a;
+    --color-page: var(--ui-page);
+    --color-surface-theme: var(--ui-surface);
+    --color-surface-alt-theme: var(--ui-surface-alt);
 
-    --color-surface-dark: #0e1c19;
-    --color-surface-dark-alt: #14312b;
+    --color-text-theme: var(--ui-text);
+    --color-muted-theme: var(--ui-muted);
+    --color-heading-theme: var(--ui-heading);
+    --color-line-theme: var(--ui-line);
 
     --font-display: "Be Vietnam Pro", system-ui, sans-serif;
     --font-body: "Manrope", system-ui, sans-serif;
 
     --radius-card: 0.875rem;
     --radius-pill: 999px;
-    --navbar-py: 1.5rem;
-    --section-py-container: 4rem;
-    --section-py-logo: 6rem;
-    --gap-logo: 0.625rem;
 }
-
 /* dành cho lớp cơ sở */
 /* Viết style mặc định */
 @layer base {
@@ -42,11 +58,9 @@
         scroll-padding-top: 5rem;
     }
 
-
     body {
-        @apply font-body bg-white text-ink antialiased dark:bg-surface-dark dark:text-ink-invert;
+        @apply bg-page font-body text-text-theme antialiased;
     }
-
 
     h1,
     h2,
@@ -59,162 +73,115 @@
     }
 
     h2 {
-        @apply font-bold text-brand-900 dark:text-white;
+        @apply font-bold text-heading-theme;
     }
 
     h3 {
-        @apply font-semibold text-brand-900 dark:text-white;
+        @apply font-semibold text-heading-theme;
     }
 
     a {
         @apply transition-colors;
     }
-
 }
 
 @layer components {
     .container-main {
-        @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16;
-    }
-
-
-    .btn {
-        @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3 text-base font-semibold transition-colors;
-    }
-
-
-    .btn-primary {
-        @apply bg-brand-600 text-white hover:bg-brand-700;
-    }
-
-
-    .btn-secondary {
-        @apply border border-line bg-white text-ink hover:bg-surface 
-        dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert dark:hover:bg-surface-dark;
+        @apply mx-auto w-full max-w-[1440px]
+               px-5 sm:px-8 lg:px-12 xl:px-16;
     }
 
     .section {
-        @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24;
+        @apply mx-auto w-full max-w-[1440px]
+               px-5 py-16
+               sm:px-8
+               lg:px-12 lg:py-24
+               xl:px-16;
     }
 
-
-    .eyebrow {
-        @apply text-sm font-semibold uppercase tracking-wider text-brand-600;
+    .btn {
+        @apply inline-flex items-center justify-center
+               gap-2 rounded-pill px-6 py-3
+               text-base font-semibold transition-colors;
     }
 
+    .btn-primary {
+        @apply bg-brand-600 text-white
+               hover:bg-brand-700;
+    }
+
+    .btn-secondary {
+        @apply border border-line-theme
+               bg-surface-alt-theme
+               text-text-theme
+               hover:bg-surface-theme;
+    }
 
     .section-title {
-        @apply font-display text-3xl font-bold tracking-tight text-brand-900 dark:text-ink-invert;
+        @apply font-display text-3xl font-bold
+               tracking-tight text-heading-theme;
     }
 
     .section-description {
-        @apply text-base leading-7 text-muted dark:text-muted-invert;
-    }
-
-    .card-title {
-        @apply text-xl font-semibold text-brand-900 dark:text-ink-invert;
-    }
-
-    .text-muted-theme {
-        @apply text-muted dark:text-muted-invert;
-    }
-
-    .text-ink-theme {
-        @apply text-ink dark:text-ink-invert;
+        @apply text-base leading-7 text-muted-theme;
     }
 
     .card {
-        @apply rounded-card border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg dark:border-line-invert dark:bg-surface-dark-alt;
-    }
-
-    .feature-icon {
-        @apply grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 dark:bg-surface-dark dark:text-brand-100;
-    }
-
-    .stat-number {
-        @apply font-display text-4xl font-extrabold text-brand-600;
-    }
-
-    .stat-label {
-        @apply order-2 mt-2 text-sm text-muted dark:text-muted-invert;
-    }
-
-    .avatar {
-        @apply grid h-11 w-11 place-items-center rounded-full bg-brand-50 font-semibold text-brand-600 dark:bg-surface-dark dark:text-brand-100;
-    }
-
-    .navbar {
-        @apply sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur dark:border-line-invert dark:bg-surface-dark/90;
-    }
-
-    .faq-item {
-        @apply border-b border-line py-5 dark:border-line-invert;
-    }
-
-    .faq-question {
-        @apply font-display text-lg font-semibold text-brand-900 dark:text-ink-invert;
-    }
-
-    .faq-answer {
-        @apply leading-7 text-muted dark:text-muted-invert;
-    }
-
-    .cta-box {
-        @apply flex flex-col items-center gap-6 rounded-card bg-brand-900 px-8 py-16 text-center;
-    }
-
-    .footer {
-        @apply border-t border-line bg-surface dark:border-line-invert dark:bg-surface-dark-alt;
-    }
-
-    .footer-title {
-        @apply text-base font-semibold text-brand-900 dark:text-ink-invert;
-    }
-
-    .footer-link {
-        @apply text-muted hover:text-brand-600 dark:text-muted-invert dark:hover:text-brand-100;
-    }
-
-    .field-label {
-        @apply mb-2 block text-sm font-medium text-brand-900 dark:text-ink-invert;
+        @apply rounded-card
+               border border-line-theme
+               bg-surface-alt-theme
+               p-6
+               transition-all
+               hover:-translate-y-1
+               hover:shadow-lg;
     }
 
     .field-input {
-        @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-ink outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert;
+        @apply w-full rounded-lg
+               border border-line-theme
+               bg-page
+               px-4 py-3
+               text-text-theme
+               outline-none transition
+               focus:border-brand-600
+               focus:ring-2
+               focus:ring-brand-100;
     }
 
     .field-textarea {
-        @apply min-h-32 w-full resize-y rounded-lg border border-line bg-white px-4 py-3 text-ink outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert;
+        @apply min-h-32 w-full resize-y
+               rounded-lg
+               border border-line-theme
+               bg-page
+               px-4 py-3
+               text-text-theme
+               outline-none transition
+               focus:border-brand-600
+               focus:ring-2
+               focus:ring-brand-100;
     }
-
-    .field-checkbox {
-        @apply h-5 w-5 rounded border-line text-brand-600 focus:ring-brand-600;
-    }
-
-    .partner-logo {
-        @apply h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0;
-    }
-    .price {
-    @apply font-display text-4xl font-extrabold text-brand-900
-           dark:text-ink-invert;
 }
+
+@layer utilities {
     .to-top {
-    @apply fixed bottom-6 right-6 z-40
+    @apply fixed right-6 bottom-6 z-40
            grid h-12 w-12 place-items-center
            rounded-full bg-brand-600 text-white
-           opacity-0 pointer-events-none
+           cursor-pointer
+           pointer-events-none opacity-0
            shadow-lg transition-opacity;
 }
 
     .to-top.is-visible {
-        @apply opacity-100 pointer-events-auto;
+        @apply pointer-events-auto opacity-100;
     }
+
     [data-reveal] {
-    opacity: 0;
-    transform: translateY(1.5rem);
-    transition:
-        opacity 500ms ease,
-        transform 500ms ease;
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition:
+            opacity 500ms ease,
+            transform 500ms ease;
     }
 
     [data-reveal].is-visible {
