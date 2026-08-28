@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
     <!-- NAVBAR  -->
     <header class="navbar">
         <nav aria-label="Điều hướng chính">
@@ -42,7 +43,7 @@
                         <li><a href="contact.html" class="hover:text-brand-600">Liên hệ</a></li>
                     </ul>
                 </nav>
-                <div id="mobile-menu"
+                <div id="nav-mobile"
                     class="hidden border-t border-line bg-white dark:border-line-invert dark:bg-surface-dark lg:hidden">
 
                     <div class="container-main flex flex-col gap-1 py-4">
@@ -88,7 +89,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false">
+                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-mobile">
 
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -854,20 +855,15 @@
             menuButton.setAttribute("aria-expanded", isOpen);
         });
     </script>
-    <button type="button" data-to-top class="fixed bottom-6 right-6 hidden
-           h-12 w-12 rounded-full
-           bg-brand-600 text-white
-           shadow-lg
-           transition
-           hover:bg-brand-700
-           focus:outline-none
-           focus:ring-2
-           focus:ring-brand-600
-           focus:ring-offset-2" aria-label="Lên đầu trang">
-        ↑
-    </button>
-    
-    <script type="module" src="./js/nav.js"></script>
+<button
+    id="nut-len-dau"
+    type="button"
+    class="to-top"
+    aria-label="Lên đầu trang"
+>
+    ↑
+</button>
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

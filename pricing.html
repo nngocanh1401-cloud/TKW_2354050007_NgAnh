@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+<div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
     <!-- NAVBAR -->
     <header class="navbar">
         <nav aria-label="Điều hướng chính">
@@ -50,7 +50,13 @@
                     </a>
                 </div>
 
-                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false">
+                <button
+    type="button"
+    class="lg:hidden"
+    aria-label="Mở menu"
+    aria-expanded="false"
+    aria-controls="nav-mobile"
+>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-900 dark:text-ink-invert"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -60,7 +66,7 @@
 
             </div>
         </nav>
-        <div id="mobile-menu"
+        <div id="nav-mobile"
             class="hidden border-t border-line bg-white dark:border-line-invert dark:bg-surface-dark lg:hidden">
 
             <div class="container-main flex flex-col gap-1 py-4">
@@ -467,18 +473,16 @@
         </div>
 
     </footer>
-    <script>
-        const menuButton = document.getElementById("menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
 
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
-
-            const isOpen = !mobileMenu.classList.contains("hidden");
-
-            menuButton.setAttribute("aria-expanded", isOpen);
-        });
-    </script>
+    <button
+    id="nut-len-dau"
+    type="button"
+    class="to-top"
+    aria-label="Lên đầu trang"
+>
+    ↑
+</button>
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
