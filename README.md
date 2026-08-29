@@ -1,51 +1,233 @@
-Chủ đề: Du lịch / Điểm đến du lịch
-Sản phẩm: Các địa điểm du lịch nổi tiếng tại Việt Nam
-Màu thương hiệu: #8ee000
---color-band-50 #f8ffe4
---color-brand-100 #eeffc5
---color-brand-600 #70b500
---color-brand-700 #538902
---color-brand-900 #395b0c
+# VietTrip
 
-Màu nhấn: #ffc715
---color-accent-300 #ffdc4a
---color-accent-400 #ffc715
---color-accent-500 #f9a907
-Màu chữ:
---color-ink: #4c4c4c  <!-- chữ chính -->
---color-muted: #6f6f6f  <!-- màu chìm -->
---color-line: #cfcfcf   <!-- màu viền -->
---color-surface: #f0f0f0 <!-- màu nền trang -->
---font-display: "Comfortaa", system-ui, sans-serif; <!-- font tiêu đề -->
---font-body: "Inter",  system-ui, sans-serif; <!-- phông tiêu đề -->
---text-h1-size: text-6xl;
---text-h1-weight: font-black;
---text-h1-leading: leading-none;
---text-h2-size: text-xl;
---text-h2-weight: font-normal;
---text-h3-size: text-base;
---text-h3-weight: font-medium;
+VietTrip là website hỗ trợ người dùng khám phá các điểm đến nổi bật tại Việt Nam, lên kế hoạch và quản lý hành trình du lịch.
 
-Bo góc:
---radius-card: 0.875rem <!-- ((14px/16px)*1=0.875rem) tương ướng với bo góc tấm thẻ -->
--radius-pill: 0.5rem <!-- bo góc cho các nút -->
-Padding:
---navbar-py: 1.5rem <!-- padding nvabar -->
---section-py-container: 4rem; <!-- padding container -->
---section-py-logo: 6rem --gap-logo: 0.625rem <!-- padding custom logo -->
+## Demo
 
+https://nngocanh1401-cloud.github.io/TKW_2354050007_NgAnh/
 
+## Figma
 
-bảng quy đổi:
-figma 		taiwindcss
-2px		rounded-sm
-4px		rounded
-6px		rounded-md
-8px		rounded-lg
-12px		rounded-xl
-16px		rounded-2xl
-24px		rounded-3xl
-9999px	rounded-full	// bo tròn hoàn toàn
+Dán link Figma tại đây.
 
+## Tính năng
 
-LINK DEPLOY: https://nngocanh1401-cloud.github.io/TKW_2354050007_NgAnh/
+- Responsive navigation
+- Dark mode
+- FAQ accordion
+- Pricing switch
+- Testimonial slider
+- Scroll reveal
+- Back to top
+- Tải dữ liệu hành trình từ JSON
+- Tìm kiếm hành trình với debounce
+- Lọc hành trình theo loại hình và trạng thái
+- Sắp xếp hành trình theo ngày, ngân sách và số ngày
+- Phân trang danh sách hành trình
+- Thêm hành trình mới
+- Xóa hành trình
+- Lưu dữ liệu bằng LocalStorage
+- Khôi phục dữ liệu mẫu
+- Hiển thị các trạng thái Loading, Data, Empty và Error
+- Validation form liên hệ bằng tiếng Việt
+- Hỗ trợ giao diện responsive trên desktop và mobile
+
+## Các trang
+
+- `index.html` - Trang chủ
+- `pricing.html` - Bảng giá
+- `contact.html` - Liên hệ
+- `trips.html` - Quản lý hành trình
+
+## Công nghệ sử dụng
+
+- HTML5
+- Tailwind CSS
+- JavaScript ES Modules
+- JSON
+- LocalStorage
+- Constraint Validation API
+
+## Chạy dự án
+
+### 1. Cài đặt dependencies
+
+```bash
+npm install
+```
+
+### 2. Build CSS
+
+```bash
+npm run build
+```
+
+### 3. Khởi chạy local server
+
+```bash
+
+Sử dụng **Live Server** trong Visual Studio Code để chạy dự án.
+```
+
+## Dữ liệu hành trình
+
+Dữ liệu mẫu của trang Hành trình được lưu tại:
+
+```text
+data/records.json
+```
+
+Sau khi người dùng thêm hoặc xóa hành trình, dữ liệu được lưu vào `localStorage` của trình duyệt.
+
+Nút **Khôi phục dữ liệu mẫu** cho phép xóa dữ liệu đã thay đổi trong `localStorage` và tải lại dữ liệu ban đầu từ `records.json`.
+
+## Chức năng trang Hành trình
+
+Trang `trips.html` hỗ trợ:
+
+- Đọc dữ liệu từ `data/records.json`
+- Hiển thị danh sách hành trình
+- Tìm kiếm theo điểm đến
+- Debounce khi tìm kiếm
+- Lọc theo loại hình
+- Lọc theo trạng thái
+- Sắp xếp theo ngày
+- Sắp xếp theo ngân sách
+- Sắp xếp theo số ngày
+- Phân trang
+- Thêm hành trình
+- Xóa hành trình
+- Lưu thay đổi bằng LocalStorage
+- Khôi phục dữ liệu mẫu
+
+Trang có đầy đủ 4 trạng thái:
+
+- **Loading** - Đang tải dữ liệu
+- **Data** - Có dữ liệu
+- **Empty** - Không tìm thấy dữ liệu
+- **Error** - Không thể tải dữ liệu
+
+## Validation form liên hệ
+
+Trang `contact.html` sử dụng Constraint Validation API để kiểm tra dữ liệu người dùng.
+
+Các trường bắt buộc được kiểm tra gồm:
+
+- Họ và tên
+- Email
+- Số điện thoại
+- Nội dung
+- Đồng ý sử dụng thông tin
+
+Thông báo lỗi được hiển thị bằng tiếng Việt.
+
+Khi biểu mẫu có nhiều trường không hợp lệ, hệ thống sẽ focus vào trường lỗi đầu tiên để người dùng dễ dàng sửa thông tin.
+
+## Responsive
+
+Website được thiết kế responsive và hỗ trợ:
+
+- Desktop
+- Tablet
+- Mobile
+
+Navbar có menu riêng dành cho thiết bị mobile.
+
+## Dark Mode
+
+Website hỗ trợ giao diện sáng và tối.
+
+Lựa chọn giao diện của người dùng được lưu lại trên trình duyệt để giữ nguyên theme khi tải lại trang.
+
+## Kiểm thử
+
+Website đã được kiểm tra các chức năng:
+
+- Responsive navigation
+- Mobile menu
+- Dark mode
+- FAQ accordion
+- Pricing switch
+- Testimonial slider
+- Scroll reveal
+- Back to top
+- Search hành trình
+- Filter hành trình
+- Sort hành trình
+- Pagination
+- Thêm hành trình
+- Xóa hành trình
+- LocalStorage
+- Khôi phục dữ liệu mẫu
+- Validation form
+- Loading state
+- Data state
+- Empty state
+- Error state
+- Chrome DevTools
+- Lighthouse
+
+## Lighthouse
+
+Website được kiểm tra bằng Chrome Lighthouse để đánh giá:
+
+- Performance
+- Accessibility
+- Best Practices
+- SEO
+
+## Screenshot
+
+### Trang chủ
+
+![Trang chủ VietTrip](./assets/img/home.png)
+
+### Trang Hành trình
+
+![Trang Hành trình](./assets/img/trips.png)
+
+### Trang Bảng giá
+
+![Trang Bảng giá](./assets/img/pricing.png)
+
+### Trang Liên hệ
+
+![Trang Liên hệ](./assets/img/contact.png)
+
+## Cấu trúc dự án
+
+```text
+VietTrip/
+├── assets/
+│   ├── img/
+│   ├── logo/
+│   └── screenshots/
+├── data/
+│   └── records.json
+├── dist/
+│   └── output.css
+├── js/
+│   ├── main.js
+│   ├── nav.js
+│   ├── theme.js
+│   ├── faq.js
+│   ├── pricing.js
+│   ├── reveal.js
+│   ├── slider.js
+│   ├── trips.js
+│   └── validation.js
+├── src/
+│   └── input.css
+├── index.html
+├── pricing.html
+├── contact.html
+├── trips.html
+├── package.json
+└── README.md
+```
+
+## 3 điều tôi sẽ làm lại nếu có thêm thời gian
+
+1. Bổ sung chức năng chỉnh sửa hành trình thay vì chỉ thêm và xóa.
+2. Thêm biểu đồ thống kê ngân sách và số lượng chuyến đi.
+3. Tách phần quản lý hành trình thành nhiều module nhỏ hơn để code dễ bảo trì và mở rộng.

@@ -5,6 +5,8 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>VIETTRIP - Lập kế hoạch du lịch Việt Nam</title>
+    <meta name="description"
+        content="Khám phá những điểm đến nổi bật tại Việt Nam và lên kế hoạch cho hành trình của bạn cùng VietTrip.">
     <script>
         (function () {
             const saved = localStorage.getItem("theme");
@@ -42,51 +44,49 @@
                         <span class="font-display text-xl font-bold text-white">V</span>
                     </div>
 
-<span class="font-display text-3xl font-bold text-heading-theme">
+                    <span class="font-display text-3xl font-bold text-heading-theme">
                         VietTrip
                     </span>
                 </a>
 
                 <!-- Desktop Menu -->
                 <nav class="hidden lg:block">
-<ul class="flex items-center gap-10 text-base font-medium text-text-theme">
+                    <ul class="flex items-center gap-10 text-base font-medium text-text-theme">
                         <li><a href="#" class="hover:text-brand-600">Trang chủ</a></li>
                         <li><a href="#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
                         <li><a href="#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
                         <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
+                        <li><a href="trips.html" class="hover:text-brand-600">Hành trình</a></li>
                         <li><a href="contact.html" class="hover:text-brand-600">Liên hệ</a></li>
                     </ul>
                 </nav>
-<div
-    id="nav-mobile"
-    class="hidden border-t border-line-theme
-           bg-page lg:hidden"
->
+                <div id="nav-mobile" class="hidden border-t border-line-theme
+           bg-page lg:hidden">
 
                     <div class="container-main flex flex-col gap-1 py-4">
 
-                        <a href="index.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                        <a href="index.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme"
+                            aria-current="page">
                             Trang chủ
                         </a>
 
-                        <a href="index.html#diem-den"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                        <a href="index.html#diem-den" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Điểm đến
                         </a>
 
-                        <a href="index.html#tinh-nang"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                        <a href="index.html#tinh-nang" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Tính năng
                         </a>
 
-                        <a href="pricing.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                        <a href="pricing.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Bảng giá
                         </a>
 
-                        <a href="contact.html"
-                            class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                        <a href="trips.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                            Hành trình
+                        </a>
+
+                        <a href="contact.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                             Liên hệ
                         </a>
 
@@ -99,7 +99,7 @@
                 </button>
                 <!-- Desktop Buttons -->
                 <div class="hidden items-center gap-5 lg:flex">
-                    <a href="#" class="font-medium text-text-theme hover:text-brand-600"
+                    <a href="#" class="font-medium text-text-theme hover:text-brand-600">
                         Đăng nhập
                     </a>
 
@@ -112,8 +112,8 @@
                 <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
                     aria-controls="nav-mobile">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -161,7 +161,7 @@
             </div>
 
             <div class="flex justify-center lg:justify-end">
-                <img src="./assets/img/hero-HaLong.jpg" alt="Vịnh Hạ Long"
+                <img src="./assets/img/hero-HaLong.jpg" alt="Vịnh Hạ Long" loading="lazy"
                     class="w-full max-w-lg rounded-card object-cover shadow-xl lg:max-w-2xl">
             </div>
 
@@ -175,17 +175,23 @@
 
             <div class="grid grid-cols-2 items-center gap-8 opacity-70 sm:grid-cols-3 lg:grid-cols-6">
 
-                <img src="./assets/logo/vietnam-airlines.svg" alt="Vietnam Airlines" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/vietnam-airlines.svg" alt="Vietnam Airlines"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/booking.svg" alt="Booking.com" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/booking.svg" alt="Booking.com"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/agoda.svg" alt="Agoda" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/agoda.svg" alt="Agoda"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/traveloka.svg" alt="Traveloka" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/traveloka.svg" alt="Traveloka"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/vietjet.svg" alt="Vietjet Air" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/vietjet.svg" alt="Vietjet Air"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
-                <img src="./assets/logo/airbnb.svg" alt="Airbnb" class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+                <img src="./assets/logo/airbnb.svg" alt="Airbnb"
+                    class="mx-auto h-7 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
 
             </div>
         </section>
@@ -223,7 +229,7 @@
 
                 <!-- Card 2 -->
                 <article class="card overflow-hidden p-0" data-reveal>
-                    <img src="./assets/img/danang.webp" alt="Đà Nẵng" class="h-56 w-full object-cover">
+                    <img src="./assets/img/danang.webp" alt="Đà Nẵng" loading="lazy" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
                         <h3 class="text-xl font-semibold text-heading-theme">
@@ -238,7 +244,7 @@
 
                 <!-- Card 3 -->
                 <article class="card overflow-hidden p-0" data-reveal>
-                    <img src="./assets/img/hoian.jpg" alt="Hội An" class="h-56 w-full object-cover">
+                    <img src="./assets/img/hoian.jpg" alt="Hội An" loading="lazy" class="h-56 w-full object-cover">
 
                     <div class="space-y-3 p-6">
                         <h3 class="text-xl font-semibold text-heading-theme">
@@ -260,7 +266,7 @@
             <div class="container-main">
                 <!-- Section Heading -->
                 <div class="flex max-w-2xl flex-col gap-4">
-                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-700">
                         TÍNH NĂNG
                     </p>
                     <h2 class="section-title">
@@ -276,10 +282,8 @@
                     <!-- Feature 1 -->
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -302,10 +306,8 @@
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
 
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
@@ -324,13 +326,11 @@
                         </article>
                     </li>
                     <!-- Feature 3 -->
-                    <li class="card"  data-reveal>
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
 
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     aria-hidden="true">
@@ -353,10 +353,8 @@
                     <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
                                 <span aria-hidden="true">♥</span>
                             </span>
 
@@ -372,13 +370,11 @@
                         </article>
                     </li>
                     <!-- Feature 5 -->
-                    <li class="card"  data-reveal>
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
                                 <span aria-hidden="true">↗</span>
                             </span>
 
@@ -392,13 +388,11 @@
                         </article>
                     </li>
                     <!-- Feature 6 -->
-                    <li class="card"  data-reveal>
+                    <li class="card" data-reveal>
                         <article class="flex flex-col gap-4">
 
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50 text-brand-600">
                                 <span aria-hidden="true">★</span>
                             </span>
 
@@ -432,157 +426,125 @@
                         để lên kế hoạch cho hành trình của mình.
                     </p>
                 </div>
- <div
-    id="testimonial-slider"
-    class="mt-14 overflow-hidden"
->
-    <div
-        data-slider-track
-        class="flex transition-transform duration-500"
-    >
+                <div id="testimonial-slider" class="mt-14 overflow-hidden">
+                    <div data-slider-track class="flex transition-transform duration-500">
 
-        <!-- Review 1 -->
-        <article
-            data-slide
-            class="w-full shrink-0"
-        >
-            <div class="card">
-                <figure class="flex h-full flex-col gap-6">
+                        <!-- Review 1 -->
+                        <article data-slide class="w-full shrink-0">
+                            <div class="card">
+                                <figure class="flex h-full flex-col gap-6">
 
-                    <blockquote class="leading-7 text-muted">
-                        “Trước đây mình mất rất nhiều thời gian để tìm địa điểm
-                        và sắp xếp lịch trình. VietTrip giúp mọi thứ trở nên
-                        rõ ràng và dễ quản lý hơn rất nhiều.”
-                    </blockquote>
+                                    <blockquote class="leading-7 text-muted">
+                                        “Trước đây mình mất rất nhiều thời gian để tìm địa điểm
+                                        và sắp xếp lịch trình. VietTrip giúp mọi thứ trở nên
+                                        rõ ràng và dễ quản lý hơn rất nhiều.”
+                                    </blockquote>
 
-                    <figcaption class="flex items-center gap-3">
+                                    <figcaption class="flex items-center gap-3">
 
-                        <div
-    class="grid h-11 w-11 place-items-center
+                                        <div class="grid h-11 w-11 place-items-center
            rounded-full bg-surface-theme
-           font-semibold text-brand-600"
->                            MA
-                        </div>
+           font-semibold text-brand-600"> MA
+                                        </div>
 
-                        <div class="flex flex-col">
-                            <span class="font-semibold text-text-theme">
-                                Minh Anh
-                            </span>
+                                        <div class="flex flex-col">
+                                            <span class="font-semibold text-text-theme">
+                                                Minh Anh
+                                            </span>
 
-                            <cite class="text-sm not-italic text-muted">
-                                Du khách tự túc
-                            </cite>
-                        </div>
+                                            <cite class="text-sm not-italic text-muted">
+                                                Du khách tự túc
+                                            </cite>
+                                        </div>
 
-                    </figcaption>
+                                    </figcaption>
 
-                </figure>
-            </div>
-        </article>
+                                </figure>
+                            </div>
+                        </article>
 
-        <!-- Review 2 -->
-        <article
-            data-slide
-            class="w-full shrink-0"
-        >
-            <div class="card">
-                <figure class="flex h-full flex-col gap-6">
+                        <!-- Review 2 -->
+                        <article data-slide class="w-full shrink-0">
+                            <div class="card">
+                                <figure class="flex h-full flex-col gap-6">
 
-                    <blockquote class="leading-7 text-muted">
-                        “Mình thích nhất tính năng theo dõi chi phí vì nhóm bạn
-                        có thể biết trước chuyến đi sẽ tốn khoảng bao nhiêu.”
-                    </blockquote>
+                                    <blockquote class="leading-7 text-muted">
+                                        “Mình thích nhất tính năng theo dõi chi phí vì nhóm bạn
+                                        có thể biết trước chuyến đi sẽ tốn khoảng bao nhiêu.”
+                                    </blockquote>
 
-                    <figcaption class="flex items-center gap-3">
+                                    <figcaption class="flex items-center gap-3">
 
-                        <div
-    class="grid h-11 w-11 place-items-center
+                                        <div class="grid h-11 w-11 place-items-center
            rounded-full bg-surface-theme
-           font-semibold text-brand-600"
->                            QB
-                        </div>
+           font-semibold text-brand-600"> QB
+                                        </div>
 
-                        <div class="flex flex-col">
-                            <span class="font-semibold text-text-theme">
-                                Quốc Bảo
-                            </span>
+                                        <div class="flex flex-col">
+                                            <span class="font-semibold text-text-theme">
+                                                Quốc Bảo
+                                            </span>
 
-                            <cite class="text-sm not-italic text-muted-theme">
-                                Travel Blogger
-                            </cite>
-                        </div>
+                                            <cite class="text-sm not-italic text-muted-theme">
+                                                Travel Blogger
+                                            </cite>
+                                        </div>
 
-                    </figcaption>
+                                    </figcaption>
 
-                </figure>
-            </div>
-        </article>
+                                </figure>
+                            </div>
+                        </article>
 
-        <!-- Review 3 -->
-        <article
-            data-slide
-            class="w-full shrink-0"
-        >
-            <div class="card">
-                <figure class="flex h-full flex-col gap-6">
+                        <!-- Review 3 -->
+                        <article data-slide class="w-full shrink-0">
+                            <div class="card">
+                                <figure class="flex h-full flex-col gap-6">
 
-                    <blockquote class="leading-7 text-muted">
-                        “Nhóm mình dùng VietTrip để cùng lên kế hoạch cho chuyến
-                        đi Đà Nẵng và Hội An. Mọi người dễ theo dõi hơn hẳn.”
-                    </blockquote>
+                                    <blockquote class="leading-7 text-muted">
+                                        “Nhóm mình dùng VietTrip để cùng lên kế hoạch cho chuyến
+                                        đi Đà Nẵng và Hội An. Mọi người dễ theo dõi hơn hẳn.”
+                                    </blockquote>
 
-                    <figcaption class="flex items-center gap-3">
+                                    <figcaption class="flex items-center gap-3">
 
-                        <div
-    class="grid h-11 w-11 place-items-center
+                                        <div class="grid h-11 w-11 place-items-center
            rounded-full bg-surface-theme
-           font-semibold text-brand-600"
->                            TH
-                        </div>
+           font-semibold text-brand-600"> TH
+                                        </div>
 
-                        <div class="flex flex-col">
-                            <span class="font-semibold text-text-theme">
-                                Thu Hà
-                            </span>
+                                        <div class="flex flex-col">
+                                            <span class="font-semibold text-text-theme">
+                                                Thu Hà
+                                            </span>
 
-                            <cite class="text-sm not-italic text-muted">
-                                Nhóm trẻ du lịch
-                            </cite>
-                        </div>
+                                            <cite class="text-sm not-italic text-muted">
+                                                Nhóm trẻ du lịch
+                                            </cite>
+                                        </div>
 
-                    </figcaption>
+                                    </figcaption>
 
-                </figure>
-            </div>
-        </article>
+                                </figure>
+                            </div>
+                        </article>
 
-    </div>
+                    </div>
 
-    <div class="mt-6 flex items-center justify-between">
+                    <div class="mt-6 flex items-center justify-between">
 
-        <button
-            type="button"
-            data-slider-prev
-            class="btn btn-secondary"
-        >
-            ⬅
-        </button>
+                        <button type="button" data-slider-prev class="btn btn-secondary">
+                            ⬅
+                        </button>
 
-        <div
-            data-slider-dots
-            class="flex gap-2"
-        ></div>
+                        <div data-slider-dots class="flex gap-2"></div>
 
-        <button
-            type="button"
-            data-slider-next
-            class="btn btn-secondary"
-        >
-            ➡
-        </button>
+                        <button type="button" data-slider-next class="btn btn-secondary">
+                            ➡
+                        </button>
 
-    </div>
-</div>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -611,9 +573,9 @@
                             Tỉnh thành
                         </dt>
 
-<dd class="font-display text-4xl font-extrabold text-brand-600">
-    34
-</dd>
+                        <dd class="font-display text-4xl font-extrabold text-brand-700">
+                            34
+                        </dd>
                     </div>
 
                     <div class="flex flex-col items-center px-6 text-center">
@@ -621,7 +583,7 @@
                             Địa điểm nổi bật
                         </dt>
 
-                        <dd class="font-display text-4xl font-extrabold text-brand-600">
+                        <dd class="font-display text-4xl font-extrabold text-brand-700">
                             500+
                         </dd>
                     </div>
@@ -631,7 +593,7 @@
                             Lịch trình được tạo
                         </dt>
 
-                        <dd class="font-display text-4xl font-extrabold text-brand-600">
+                        <dd class="font-display text-4xl font-extrabold text-brand-700">
                             10K+
                         </dd>
                     </div>
@@ -697,7 +659,8 @@
                             </p>
                         </div>
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="0" data-yearly="0">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price
+                                data-monthly="0" data-yearly="0">
                                 0 ₫
                             </span>
 
@@ -731,7 +694,8 @@
                             </p>
                         </div>
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="99000" data-yearly="1188000">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price
+                                data-monthly="99000" data-yearly="1188000">
                                 99.000 ₫
                             </span>
 
@@ -763,7 +727,8 @@
                         </div>
 
                         <div>
-                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price data-monthly="199000" data-yearly="2388000">
+                            <span class="font-display text-4xl font-extrabold text-heading-theme" data-price
+                                data-monthly="199000" data-yearly="2388000">
                                 199.000 ₫
                             </span>
 
@@ -815,8 +780,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-1">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-1">
                                     VietTrip dùng để làm gì?
                                 </button>
                             </h3>
@@ -835,8 +799,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-2">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-2">
                                     Tôi có thể sử dụng VietTrip miễn phí không?
                                 </button>
                             </h3>
@@ -854,8 +817,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-3">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-3">
                                     VietTrip có hỗ trợ đi theo nhóm không?
                                 </button>
                             </h3>
@@ -873,8 +835,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-4">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-4">
                                     Tôi có thể theo dõi ngân sách chuyến đi không?
                                 </button>
                             </h3>
@@ -892,8 +853,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-5">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-5">
                                     Có thể lưu địa điểm yêu thích không?
                                 </button>
                             </h3>
@@ -911,8 +871,7 @@
                         <div class="border-b border-line-theme py-5">
                             <h3>
                                 <button type="button" class="w-full text-left font-display
-       text-lg font-semibold text-heading-theme" data-faq-trigger
-                                    aria-expanded="false" aria-controls="faq-answer-6">
+       text-lg font-semibold text-heading-theme" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-6">
                                     Tôi có thể nâng cấp gói sau không?
                                 </button>
                             </h3>
@@ -930,11 +889,9 @@
         <section id="cta" class="py-24">
             <div class="container-main">
 
-                <div
-    class="flex flex-col items-center gap-6
+                <div class="flex flex-col items-center gap-6
            rounded-card bg-brand-900
-           px-8 py-16 text-center"
->
+           px-8 py-16 text-center">
 
                     <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
                         SẴN SÀNG CHO HÀNH TRÌNH TIẾP THEO?
@@ -955,7 +912,7 @@
                             Bắt đầu miễn phí
                         </a>
 
-                        <a href="#tinh-nang" class="btn border border-brand-100 text-white hover:bg-brand-700">
+                        <a href="#tinh-nang" class="btn border border-brand-100 text-white hover:bg-brand-600">
                             Xem tính năng
                         </a>
                     </div>

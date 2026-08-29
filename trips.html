@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>VIETTRIP - Hành trình</title>
+
+    <meta name="description"
+        content="Quản lý hành trình VietTrip, tìm kiếm, lọc, sắp xếp và lưu lại những chuyến đi của bạn.">
+
+    <!-- Chống flash khi bật Dark Mode -->
+    <script>
+        (function () {
+            const saved = localStorage.getItem("theme");
+
+            const dark = saved
+                ? saved === "dark"
+                : window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches;
+
+            document.documentElement.classList.toggle(
+                "dark",
+                dark
+            );
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+
+<body>
+
+    <!-- Sentinel dùng cho navbar + nút lên đầu -->
+    <div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
+    <header class="sticky top-0 z-50 border-b border-line-theme bg-page/90 backdrop-blur">
+
+        <nav aria-label="Điều hướng chính">
+
+            <div class="container-main flex items-center justify-between py-6">
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+
+                    <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600">
+                        <span class="font-display text-xl font-bold text-white">
+                            V
+                        </span>
+                    </div>
+
+                    <span class="font-display text-3xl font-bold text-heading-theme">
+                        VietTrip
+                    </span>
+
+                </a>
+
+
+                <!-- Desktop menu -->
+                <div class="hidden lg:block">
+
+                    <ul class="flex items-center gap-8 text-base font-medium text-text-theme">
+
+                        <li>
+                            <a href="index.html" class="hover:   text-brand-700">
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#diem-den" class="hover:   text-brand-700">
+                                Điểm đến
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#tinh-nang" class="hover:   text-brand-700">
+                                Tính năng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pricing.html" class="hover:   text-brand-700">
+                                Bảng giá
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trips.html" class="   text-brand-700" aria-current="page">
+                                Hành trình
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" class="hover:   text-brand-700">
+                                Liên hệ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Theme -->
+                <button type="button" data-theme-toggle aria-label="Bật chế độ tối" class="btn btn-secondary">
+                    🌙
+                </button>
+
+
+                <!-- Desktop buttons -->
+                <div class="hidden items-center gap-5 lg:flex">
+
+                    <a href="#" class="font-medium text-text-theme hover:   text-brand-700">
+                        Đăng nhập
+                    </a>
+
+                    <a href="pricing.html" class="btn btn-primary">
+                        Bắt đầu
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile button -->
+                <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
+                    aria-controls="nav-mobile">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- Mobile menu -->
+        <div id="nav-mobile" class="hidden border-t border-line-theme bg-page lg:hidden">
+
+            <div class="container-main flex flex-col gap-1 py-4">
+
+                <a href="index.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Trang chủ
+                </a>
+
+                <a href="index.html#diem-den" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Điểm đến
+                </a>
+
+                <a href="index.html#tinh-nang" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Tính năng
+                </a>
+
+                <a href="pricing.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Bảng giá
+                </a>
+
+                <a href="trips.html" class="rounded-lg bg-surface-theme px-4 py-3 font-medium    text-brand-700"
+                    aria-current="page">
+                    Hành trình
+                </a>
+
+                <a href="contact.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Liên hệ
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="section">
+
+            <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-wider    text-brand-700">
+                    Hành trình
+                </p>
+
+                <h1 class="font-display text-4xl font-black text-heading-theme sm:text-5xl lg:text-6xl">
+                    Quản lý những chuyến đi của bạn
+                </h1>
+
+                <p class="section-description max-w-2xl">
+                    Tìm kiếm, lọc, sắp xếp và quản lý
+                    các hành trình VietTrip của bạn
+                    trên một trang duy nhất.
+                </p>
+
+            </div>
+
+        </section>
+        <section class="section pt-0">
+
+            <div id="trip-app">
+                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Search -->
+                    <div>
+
+                        <label for="trip-search" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Tìm điểm đến
+                        </label>
+
+                        <input id="trip-search" type="search" class="field-input" placeholder="Ví dụ: Đà Lạt"
+                            autocomplete="off">
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div>
+
+                        <label for="trip-category" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Loại hình
+                        </label>
+
+                        <select id="trip-category" class="field-input">
+
+                            <option value="all">
+                                Tất cả loại hình
+                            </option>
+
+                            <option value="bien-dao">
+                                Biển đảo
+                            </option>
+
+                            <option value="nui">
+                                Núi
+                            </option>
+
+                            <option value="van-hoa">
+                                Văn hóa
+                            </option>
+
+                            <option value="thien-nhien">
+                                Thiên nhiên
+                            </option>
+
+                            <option value="nghi-duong">
+                                Nghỉ dưỡng
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Status -->
+                    <div>
+
+                        <label for="trip-status" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Trạng thái
+                        </label>
+
+                        <select id="trip-status" class="field-input">
+
+                            <option value="all">
+                                Tất cả trạng thái
+                            </option>
+
+                            <option value="dang-len-ke-hoach">
+                                Đang lên kế hoạch
+                            </option>
+
+                            <option value="sap-di">
+                                Sắp đi
+                            </option>
+
+                            <option value="da-di">
+                                Đã đi
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Sort -->
+                    <div>
+
+                        <label for="trip-sort" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Sắp xếp
+                        </label>
+
+                        <select id="trip-sort" class="field-input">
+
+                            <option value="date-desc">
+                                Ngày mới nhất
+                            </option>
+
+                            <option value="date-asc">
+                                Ngày cũ nhất
+                            </option>
+
+                            <option value="budget-desc">
+                                Ngân sách cao → thấp
+                            </option>
+
+                            <option value="budget-asc">
+                                Ngân sách thấp → cao
+                            </option>
+
+                            <option value="days-desc">
+                                Số ngày nhiều → ít
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="mt-6 flex flex-wrap gap-3">
+
+                    <button id="show-add-trip" type="button" class="btn btn-primary">
+                        + Thêm hành trình
+                    </button>
+
+                    <button id="reset-records" type="button" class="btn btn-secondary">
+                        Khôi phục dữ liệu mẫu
+                    </button>
+
+                </div>
+                <form id="trip-form" class="card mt-8 hidden">
+
+                    <div class="flex flex-col gap-2">
+
+                        <p class="text-sm font-semibold uppercase tracking-wider    text-brand-700">
+                            Hành trình mới
+                        </p>
+
+                        <h2 class="section-title">
+                            Thêm chuyến đi
+                        </h2>
+
+                        <p class="section-description">
+                            Nhập thông tin cho hành trình
+                            bạn muốn thêm vào VietTrip.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mt-6 grid gap-5 md:grid-cols-2">
+
+                        <!-- Destination -->
+                        <div>
+
+                            <label for="trip-destination" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Điểm đến
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <input id="trip-destination" name="destination" type="text" required class="field-input"
+                                placeholder="Ví dụ: Đà Lạt">
+
+                        </div>
+
+
+                        <!-- Form category -->
+                        <div>
+
+                            <label for="trip-form-category" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Loại hình
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <select id="trip-form-category" name="category" required class="field-input">
+
+                                <option value="">
+                                    Chọn loại hình
+                                </option>
+
+                                <option value="bien-dao">
+                                    Biển đảo
+                                </option>
+
+                                <option value="nui">
+                                    Núi
+                                </option>
+
+                                <option value="van-hoa">
+                                    Văn hóa
+                                </option>
+
+                                <option value="thien-nhien">
+                                    Thiên nhiên
+                                </option>
+
+                                <option value="nghi-duong">
+                                    Nghỉ dưỡng
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Form status -->
+                        <div>
+
+                            <label for="trip-form-status" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Trạng thái
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <select id="trip-form-status" name="status" required class="field-input">
+
+                                <option value="">
+                                    Chọn trạng thái
+                                </option>
+
+                                <option value="dang-len-ke-hoach">
+                                    Đang lên kế hoạch
+                                </option>
+
+                                <option value="sap-di">
+                                    Sắp đi
+                                </option>
+
+                                <option value="da-di">
+                                    Đã đi
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Days -->
+                        <div>
+
+                            <label for="trip-days" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Số ngày
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <input id="trip-days" name="days" type="number" min="1" required class="field-input"
+                                placeholder="3">
+
+                        </div>
+
+
+                        <!-- Budget -->
+                        <div>
+
+                            <label for="trip-budget" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Ngân sách
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <input id="trip-budget" name="budget" type="number" min="0" step="1000" required
+                                class="field-input" placeholder="4500000">
+
+                        </div>
+
+
+                        <!-- Date -->
+                        <div>
+
+                            <label for="trip-date" class="mb-2 block text-sm font-medium text-heading-theme">
+                                Ngày đi
+                                <span class="   text-brand-700">*</span>
+                            </label>
+
+                            <input id="trip-date" name="date" type="date" required class="field-input">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+
+                        <button type="submit" class="btn btn-primary">
+                            Lưu hành trình
+                        </button>
+
+                        <button id="cancel-add-trip" type="button" class="btn btn-secondary">
+                            Hủy
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <div id="trip-loading" class="mt-10" aria-live="polite">
+
+                    <div class="card animate-pulse">
+
+                        <div class="h-5 w-1/3 rounded bg-surface-theme"></div>
+
+                        <div class="mt-5 h-5 w-full rounded bg-surface-theme"></div>
+
+                        <div class="mt-3 h-5 w-5/6 rounded bg-surface-theme"></div>
+
+                        <div class="mt-3 h-5 w-4/6 rounded bg-surface-theme"></div>
+
+                    </div>
+
+                </div>
+                <div id="trip-error" class="mt-10 hidden rounded-card border border-red-500 p-6 text-red-600"
+                    role="alert"></div>
+                <div id="trip-empty" class="mt-10 hidden rounded-card border border-line-theme p-10 text-center">
+
+                    <div class="mx-auto flex max-w-lg flex-col items-center gap-3">
+
+                        <span class="text-4xl" aria-hidden="true">
+                            🧳
+                        </span>
+
+                        <h2 class="text-xl font-semibold text-heading-theme">
+                            Không tìm thấy hành trình
+                        </h2>
+
+                        <p class="text-muted-theme">
+                            Hãy thử thay đổi từ khóa tìm kiếm
+                            hoặc bộ lọc hiện tại.
+                        </p>
+
+                    </div>
+
+                </div>
+                <div id="trip-table-wrapper" class="mt-10 hidden overflow-x-auto rounded-card border border-line-theme">
+
+                    <table class="w-full min-w-[1000px] text-left">
+
+                        <caption class="sr-only">
+                            Danh sách hành trình VietTrip
+                        </caption>
+
+                        <thead class="bg-surface-theme">
+
+                            <tr>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Mã
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Điểm đến
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Loại hình
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Trạng thái
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Số ngày
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Ngân sách
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Ngày đi
+                                </th>
+
+                                <th scope="col" class="px-4 py-4">
+                                    Thao tác
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="trip-table-body" class="divide-y divide-line-theme"></tbody>
+
+                    </table>
+
+                </div>
+                <div id="trip-pagination" class="mt-6 hidden flex flex-wrap items-center justify-between gap-4">
+
+                    <p id="trip-page-info" class="text-sm text-muted-theme">
+                        Trang 1 / 1
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2">
+
+                        <button id="trip-prev" type="button" class="btn btn-secondary">
+                            ← Trước
+                        </button>
+
+                        <div id="trip-page-buttons" class="flex flex-wrap items-center gap-2"></div>
+
+                        <button id="trip-next" type="button" class="btn btn-secondary">
+                            Sau →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p class="mt-3 hidden text-sm text-muted-theme lg:block">
+                    Dữ liệu hành trình được tải từ
+                    <code>data/records.json</code>
+                    và được lưu lại trên trình duyệt
+                    sau khi bạn thay đổi.
+                </p>
+
+
+                TEMPLATE
+                Không dùng innerHTML cho dữ liệu record
+
+                <template id="trip-row-template">
+
+                    <tr>
+
+                        <td data-cell="id" class="px-4 py-4 text-sm text-muted-theme"></td>
+
+
+                        <td data-cell="destination" class="px-4 py-4 font-medium text-heading-theme"></td>
+
+
+                        <td data-cell="category" class="px-4 py-4"></td>
+
+
+                        <td data-cell="status" class="px-4 py-4"></td>
+
+
+                        <td data-cell="days" class="px-4 py-4"></td>
+
+
+                        <td data-cell="budget" class="px-4 py-4"></td>
+
+
+                        <td data-cell="date" class="px-4 py-4"></td>
+
+
+                        <td class="px-4 py-4">
+
+                            <button type="button" data-action="delete" class="btn btn-secondary"
+                                aria-label="Xóa hành trình">
+                                Xóa
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </template>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="flex flex-col items-center gap-6 rounded-card bg-brand-900 px-8 py-16 text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
+                    KHÁM PHÁ VIỆT NAM
+                </p>
+
+                <h2 class="max-w-3xl text-4xl font-bold text-white">
+                    Chưa biết hành trình tiếp theo
+                    nên đi đâu?
+                </h2>
+
+                <p class="max-w-2xl leading-7 text-brand-100">
+                    Khám phá những điểm đến nổi bật
+                    và thêm chúng vào kế hoạch của bạn.
+                </p>
+
+                <div class="flex flex-col items-center gap-4 sm:flex-row">
+
+                    <a href="index.html#diem-den" class="btn bg-white text-brand-900 hover:bg-brand-50">
+                        Khám phá điểm đến
+                    </a>
+
+                    <a href="pricing.html" class="btn border border-brand-100 text-white hover:bg-brand-600">
+                        Xem bảng giá
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="border-t border-line-theme bg-surface-theme">
+
+        <div class="container-main grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+
+            <div>
+
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">
+                    VietTrip
+                </h3>
+
+                <p class="section-description">
+                    Khám phá Việt Nam theo cách của bạn.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">
+                    Điểm đến
+                </h3>
+
+                <ul class="space-y-2">
+
+                    <li>
+                        <a href="index.html#diem-den" class="text-muted-theme hover:   text-brand-700">
+                            Hạ Long
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#diem-den" class="text-muted-theme hover:   text-brand-700">
+                            Đà Lạt
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#diem-den" class="text-muted-theme hover:   text-brand-700">
+                            Phú Quốc
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">
+                    VietTrip
+                </h3>
+
+                <ul class="space-y-2">
+
+                    <li>
+                        <a href="trips.html" class="text-muted-theme hover:   text-brand-700">
+                            Hành trình
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pricing.html" class="text-muted-theme hover:   text-brand-700">
+                            Bảng giá
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="text-muted-theme hover:   text-brand-700">
+                            Liên hệ
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="mb-4 text-base font-semibold text-heading-theme">
+                    Liên hệ
+                </h3>
+
+                <ul class="space-y-2">
+
+                    <li class="text-muted-theme">
+                        viettrip@gmail.com
+                    </li>
+
+                    <li class="text-muted-theme">
+                        0123 456 789
+                    </li>
+
+                    <li class="text-muted-theme">
+                        Hồ Chí Minh, Việt Nam
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <button id="nut-len-dau" type="button" class="to-top" aria-label="Lên đầu trang">
+        ↑
+    </button>
+
+
+    <!-- JS -->
+    <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>

@@ -5,6 +5,8 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>VIETTRIP - Liên hệ </title>
+    <meta name="description"
+        content="Liên hệ VietTrip để được hỗ trợ về hành trình, tài khoản, bảng giá và các dịch vụ du lịch.">
     <script>
         (function () {
             const saved = localStorage.getItem("theme");
@@ -33,90 +35,144 @@
     <div id="nav-sentinel" class="h-px" aria-hidden="true"></div>
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 border-b border-line-theme bg-page/90 backdrop-blur">
+
         <nav aria-label="Điều hướng chính">
+
             <div class="container-main flex items-center justify-between py-6">
 
+                <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-3">
+
                     <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600">
-                        <span class="font-display text-xl font-bold text-white">V</span>
+                        <span class="font-display text-xl font-bold text-white">
+                            V
+                        </span>
                     </div>
 
                     <span class="font-display text-3xl font-bold text-heading-theme">
                         VietTrip
                     </span>
+
                 </a>
 
+
+                <!-- Desktop Menu -->
                 <div class="hidden lg:block">
-                    <ul class="flex items-center gap-10 text-base font-medium text-text-theme">
-                        <li><a href="index.html" class="hover:text-brand-600">Trang chủ</a></li>
-                        <li><a href="index.html#diem-den" class="hover:text-brand-600">Điểm đến</a></li>
-                        <li><a href="index.html#tinh-nang" class="hover:text-brand-600">Tính năng</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-600">Bảng giá</a></li>
-                        <li><a href="contact.html" class="text-brand-600">Liên hệ</a></li>
+
+                    <ul class="flex items-center gap-8 text-base font-medium text-text-theme">
+
+                        <li>
+                            <a href="index.html" class="hover:   text-brand-700">
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#diem-den" class="hover:   text-brand-700">
+                                Điểm đến
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#tinh-nang" class="hover:   text-brand-700">
+                                Tính năng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pricing.html" class="hover:   text-brand-700">
+                                Bảng giá
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trips.html" class="hover:   text-brand-700">
+                                Hành trình
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" class="   text-brand-700" aria-current="page">
+                                Liên hệ
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
 
+
+                <!-- Theme -->
                 <button type="button" data-theme-toggle aria-label="Bật chế độ tối" class="btn btn-secondary">
                     🌙
                 </button>
 
+
+                <!-- Desktop Buttons -->
                 <div class="hidden items-center gap-5 lg:flex">
-                    <a href="#" class="font-medium text-text-theme hover:text-brand-600">
+
+                    <a href="#" class="font-medium text-text-theme hover:   text-brand-700">
                         Đăng nhập
                     </a>
 
-                    <a href="#" class="btn btn-primary">
+                    <a href="pricing.html" class="btn btn-primary">
                         Bắt đầu
                     </a>
+
                 </div>
 
+
+                <!-- Mobile Menu Button -->
                 <button id="menu-button" type="button" class="lg:hidden" aria-label="Mở menu" aria-expanded="false"
                     aria-controls="nav-mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-heading-theme" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
+
                 </button>
 
             </div>
+
         </nav>
-<div
-    id="nav-mobile"
-    class="hidden border-t border-line-theme
-           bg-page lg:hidden"
->
+
+
+        <!-- Mobile Menu -->
+        <div id="nav-mobile" class="hidden border-t border-line-theme bg-page lg:hidden">
 
             <div class="container-main flex flex-col gap-1 py-4">
 
-                <a href="index.html"
-                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                <a href="index.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                     Trang chủ
                 </a>
 
-                <a href="index.html#diem-den"
-                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                <a href="index.html#diem-den" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                     Điểm đến
                 </a>
 
-                <a href="index.html#tinh-nang"
-                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                <a href="index.html#tinh-nang" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                     Tính năng
                 </a>
 
-                <a href="pricing.html"
-                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                <a href="pricing.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
                     Bảng giá
                 </a>
 
-                <a href="contact.html"
-                    class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                <a href="trips.html" class="rounded-lg px-4 py-3 font-medium hover:bg-surface-theme">
+                    Hành trình
+                </a>
+
+                <a href="contact.html" class="rounded-lg bg-surface-theme px-4 py-3 font-medium    text-brand-700"
+                    aria-current="page">
                     Liên hệ
                 </a>
 
             </div>
 
         </div>
+
     </header>
     <main>
 
@@ -124,12 +180,11 @@
         <section class="section">
             <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
 
-                <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                <p class="text-sm font-semibold uppercase tracking-wider    text-brand-700">
                     Liên hệ
                 </p>
 
-                <h1
-                    class="font-display text-4xl font-black text-heading-theme sm:text-5xl lg:text-6xl">
+                <h1 class="font-display text-4xl font-black text-heading-theme sm:text-5xl lg:text-6xl">
                     Hãy để VietTrip đồng hành cùng chuyến đi của bạn
                 </h1>
 
@@ -151,7 +206,7 @@
                 <div class="flex flex-col gap-8">
 
                     <div class="flex flex-col gap-4">
-                        <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                        <p class="text-sm font-semibold uppercase tracking-wider    text-brand-700">
                             Thông tin liên hệ
                         </p>
 
@@ -169,10 +224,8 @@
                     <div class="flex flex-col gap-5">
 
                         <div class="card flex items-start gap-4">
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50    text-brand-700">
                                 @
                             </span>
 
@@ -189,10 +242,8 @@
 
 
                         <div class="card flex items-start gap-4">
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50    text-brand-700">
                                 ☎
                             </span>
 
@@ -209,10 +260,8 @@
 
 
                         <div class="card flex items-start gap-4">
-                            <span
-    class="grid h-11 w-11 place-items-center
-           rounded-lg bg-brand-50 text-brand-600"
->
+                            <span class="grid h-11 w-11 place-items-center
+           rounded-lg bg-brand-50    text-brand-700">
                                 ⌖
                             </span>
 
@@ -230,140 +279,157 @@
                     </div>
 
                 </div>
-
-
                 <!-- Contact Form -->
-                <form class="card flex flex-col gap-6">
+                <form id="contact-form" class="card flex flex-col gap-6" novalidate>
+
+                    <!-- Error summary -->
+                    <div id="form-error-summary"
+                        class="hidden rounded-lg border border-red-500 p-4 text-sm text-red-600" role="alert"></div>
 
 
+                    <!-- Họ tên -->
                     <div class="flex flex-col gap-2">
-                        <label for="ho-ten"
-                        class="mb-2 block text-sm font-medium text-heading-theme"
-                        >
+
+                        <label for="ho-ten" class="mb-2 block text-sm font-medium text-heading-theme">
                             Họ và tên
-                            <span class="text-brand-600">*</span>
+                            <span class="   text-brand-700">*</span>
                         </label>
 
-                        <input id="ho-ten" name="hoTen" type="text" required autocomplete="name" class="field-input"
-                            placeholder="Nguyễn Văn A">
+                        <input id="ho-ten" name="hoTen" type="text" required minlength="2" autocomplete="name"
+                            class="field-input" placeholder="Nguyễn Văn A" aria-describedby="ho-ten-error">
+
+                        <p id="ho-ten-error" data-error-for="ho-ten" class="hidden text-sm text-red-600"></p>
+
                     </div>
 
 
+                    <!-- Email -->
                     <div class="flex flex-col gap-2">
+
                         <label for="email" class="mb-2 block text-sm font-medium text-heading-theme">
                             Email
-                            <span class="text-brand-600">*</span>
+                            <span class="   text-brand-700">*</span>
                         </label>
 
                         <input id="email" name="email" type="email" required autocomplete="email" class="field-input"
-                            placeholder="example@gmail.com">
+                            placeholder="example@gmail.com" aria-describedby="email-error">
+
+                        <p id="email-error" data-error-for="email" class="hidden text-sm text-red-600"></p>
+
                     </div>
 
 
+                    <!-- Điện thoại -->
                     <div class="flex flex-col gap-2">
+
                         <label for="dien-thoai" class="mb-2 block text-sm font-medium text-heading-theme">
                             Số điện thoại
-                            <span class="text-brand-600">*</span>
+                            <span class="   text-brand-700">*</span>
                         </label>
 
                         <input id="dien-thoai" name="dienThoai" type="tel" required pattern="0[0-9]{9}"
-                            autocomplete="tel" inputmode="numeric" class="field-input" placeholder="0912345678">
+                            autocomplete="tel" inputmode="numeric" class="field-input" placeholder="0912345678"
+                            aria-describedby="dien-thoai-error">
+
+                        <p id="dien-thoai-error" data-error-for="dien-thoai" class="hidden text-sm text-red-600"></p>
+
                     </div>
 
 
-<div class="flex flex-col gap-2">
-    <label
-        for="chu-de"
-        class="mb-2 block text-sm font-medium text-heading-theme"
-    >
-        Chủ đề
-    </label>
-
-    <select
-        id="chu-de"
-        name="chuDe"
-        class="field-input"
-    >
-        <option value="">
-            Chọn chủ đề
-        </option>
-
-        <option value="ho-tro">
-            Hỗ trợ sử dụng
-        </option>
-
-        <option value="bang-gia">
-            Bảng giá
-        </option>
-
-        <option value="tai-khoan">
-            Tài khoản
-        </option>
-
-        <option value="khac">
-            Khác
-        </option>
-    </select>
-</div>
-
-
-<div class="flex flex-col gap-2">
-    <label
-        for="goi-dich-vu"
-        class="mb-2 block text-sm font-medium text-heading-theme"
-    >
-        Gói đang quan tâm
-    </label>
-
-    <select
-        id="goi-dich-vu"
-        name="goiDichVu"
-        class="field-input"
-    >
-        <option value="free">
-            Free
-        </option>
-
-        <option value="explorer">
-            Explorer
-        </option>
-
-        <option value="pro">
-            Pro
-        </option>
-    </select>
-</div>
+                    <!-- Chủ đề -->
                     <div class="flex flex-col gap-2">
+
+                        <label for="chu-de" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Chủ đề
+                        </label>
+
+                        <select id="chu-de" name="chuDe" class="field-input">
+                            <option value="">
+                                Chọn chủ đề
+                            </option>
+
+                            <option value="ho-tro">
+                                Hỗ trợ sử dụng
+                            </option>
+
+                            <option value="bang-gia">
+                                Bảng giá
+                            </option>
+
+                            <option value="tai-khoan">
+                                Tài khoản
+                            </option>
+
+                            <option value="khac">
+                                Khác
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Gói dịch vụ -->
+                    <div class="flex flex-col gap-2">
+
+                        <label for="goi-dich-vu" class="mb-2 block text-sm font-medium text-heading-theme">
+                            Gói đang quan tâm
+                        </label>
+
+                        <select id="goi-dich-vu" name="goiDichVu" class="field-input">
+                            <option value="free">
+                                Free
+                            </option>
+
+                            <option value="explorer">
+                                Explorer
+                            </option>
+
+                            <option value="pro">
+                                Pro
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Nội dung -->
+                    <div class="flex flex-col gap-2">
+
                         <label for="noi-dung" class="mb-2 block text-sm font-medium text-heading-theme">
                             Nội dung
-                            <span class="text-brand-600">*</span>
+                            <span class="   text-brand-700">*</span>
                         </label>
 
-                        <textarea id="noi-dung" name="noiDung" required class="field-textarea"
-                            placeholder="Nhập nội dung cần hỗ trợ..."></textarea>
+                        <textarea id="noi-dung" name="noiDung" required minlength="10" class="field-textarea"
+                            placeholder="Nhập nội dung cần hỗ trợ..." aria-describedby="noi-dung-error"></textarea>
+
+                        <p id="noi-dung-error" data-error-for="noi-dung" class="hidden text-sm text-red-600"></p>
+
                     </div>
 
 
-                    <div class="flex items-start gap-3">
+                    <!-- Đồng ý -->
+                    <div>
 
-                        <input id="dong-y" name="dongY" type="checkbox" required class="h-5 w-5 rounded
-           border-line-theme
-           accent-brand-600
-           focus:ring-2
-           focus:ring-brand-600">
+                        <div class="flex items-start gap-3">
 
-                        <label for="dong-y" class="text-muted-theme text-sm leading-6">
-                            Tôi đồng ý để VietTrip sử dụng thông tin này
-                            nhằm phản hồi yêu cầu hỗ trợ.
-                        </label>
+                            <input id="dong-y" name="dongY" type="checkbox" required class="field-checkbox"
+                                aria-describedby="dong-y-error">
+
+                            <label for="dong-y" class="text-sm leading-6 text-muted-theme">
+                                Tôi đồng ý để VietTrip sử dụng thông tin này
+                                nhằm phản hồi yêu cầu hỗ trợ.
+                            </label>
+
+                        </div>
+
+                        <p id="dong-y-error" data-error-for="dong-y" class="mt-2 hidden text-sm text-red-600"></p>
 
                     </div>
 
 
                     <button type="submit" class="btn btn-primary w-full">
-
                         Gửi yêu cầu
-
                     </button>
 
                 </form>
@@ -380,7 +446,7 @@
 
                 <div class="flex flex-col gap-4">
 
-                    <p class="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                    <p class="text-sm font-semibold uppercase tracking-wider    text-brand-700">
                         Câu hỏi thường gặp
                     </p>
 
@@ -445,11 +511,9 @@
         <!-- CTA -->
         <section class="section">
 
-            <div
-    class="flex flex-col items-center gap-6
+            <div class="flex flex-col items-center gap-6
            rounded-card bg-brand-900
-           px-8 py-16 text-center"
->
+           px-8 py-16 text-center">
 
                 <p class="text-sm font-semibold uppercase tracking-wider text-brand-100">
                     BẮT ĐẦU NGAY HÔM NAY
@@ -469,7 +533,7 @@
                         Khám phá điểm đến
                     </a>
 
-                    <a href="pricing.html" class="btn border border-brand-100 text-white hover:bg-brand-700">
+                    <a href="pricing.html" class="btn border border-brand-100 text-white hover:bg-brand-600">
                         Xem bảng giá
                     </a>
 
@@ -496,9 +560,9 @@
                 <h3 class="mb-4 text-base font-semibold text-heading-theme">Điểm đến</h3>
 
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Hạ Long</a></li>
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Đà Lạt</a></li>
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Phú Quốc</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Hạ Long</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Đà Lạt</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Phú Quốc</a></li>
                 </ul>
             </div>
 
@@ -506,9 +570,9 @@
                 <h3 class="mb-4 text-base font-semibold text-heading-theme">Cẩm nang</h3>
 
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Lịch trình</a></li>
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Mẹo du lịch</a></li>
-                    <li><a href="#" class="text-muted-theme hover:text-brand-600">Ẩm thực</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Lịch trình</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Mẹo du lịch</a></li>
+                    <li><a href="#" class="text-muted-theme hover:   text-brand-700">Ẩm thực</a></li>
                 </ul>
             </div>
 
@@ -516,9 +580,9 @@
                 <h3 class="mb-4 text-base font-semibold text-heading-theme">Liên hệ</h3>
 
                 <ul class="space-y-2">
-                    <li class="text-muted-theme hover:text-brand-600">viettrip@gmail.com</li>
-                    <li class="text-muted-theme hover:text-brand-600">0123 456 789</li>
-                    <li class="text-muted-theme hover:text-brand-600">Hồ Chí Minh, Việt Nam</li>
+                    <li class="text-muted-theme hover:   text-brand-700">viettrip@gmail.com</li>
+                    <li class="text-muted-theme hover:   text-brand-700">0123 456 789</li>
+                    <li class="text-muted-theme hover:   text-brand-700">Hồ Chí Minh, Việt Nam</li>
                 </ul>
             </div>
 

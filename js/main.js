@@ -5,6 +5,8 @@ import { initFaq } from "./faq.js";
 import { initPricing } from "./pricing.js";
 import { initReveal } from "./reveal.js";
 import { initSlider } from "./slider.js";
+import { initTrips } from "./trips.js";
+import { initValidation } from "./validation.js";
 
 
 initNav();
@@ -15,4 +17,6 @@ initFaq();
 initPricing();
 initReveal();
 initSlider();
+initTrips();
+initValidation();
 
