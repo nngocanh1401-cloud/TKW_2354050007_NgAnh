@@ -1,0 +1,272 @@
+[
+    {
+        "id": "VT-2608-001",
+        "destination": "Vịnh Hạ Long",
+        "category": "bien-dao",
+        "status": "sap-di",
+        "days": 3,
+        "budget": 4500000,
+        "date": "2026-09-05"
+    },
+    {
+        "id": "VT-2608-002",
+        "destination": "Đà Nẵng",
+        "category": "bien-dao",
+        "status": "da-di",
+        "days": 4,
+        "budget": 5200000,
+        "date": "2026-07-15"
+    },
+    {
+        "id": "VT-2608-003",
+        "destination": "Hội An",
+        "category": "van-hoa",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2800000,
+        "date": "2026-06-20"
+    },
+    {
+        "id": "VT-2608-004",
+        "destination": "Đà Lạt",
+        "category": "nghi-duong",
+        "status": "sap-di",
+        "days": 4,
+        "budget": 4800000,
+        "date": "2026-09-18"
+    },
+    {
+        "id": "VT-2608-005",
+        "destination": "Phú Quốc",
+        "category": "bien-dao",
+        "status": "dang-len-ke-hoach",
+        "days": 5,
+        "budget": 8500000,
+        "date": "2026-11-10"
+    },
+    {
+        "id": "VT-2608-006",
+        "destination": "Sa Pa",
+        "category": "nui",
+        "status": "dang-len-ke-hoach",
+        "days": 4,
+        "budget": 5600000,
+        "date": "2026-12-02"
+    },
+    {
+        "id": "VT-2608-007",
+        "destination": "Ninh Bình",
+        "category": "thien-nhien",
+        "status": "da-di",
+        "days": 3,
+        "budget": 3200000,
+        "date": "2026-05-11"
+    },
+    {
+        "id": "VT-2608-008",
+        "destination": "Huế",
+        "category": "van-hoa",
+        "status": "sap-di",
+        "days": 3,
+        "budget": 3900000,
+        "date": "2026-09-25"
+    },
+    {
+        "id": "VT-2608-009",
+        "destination": "Mũi Né",
+        "category": "bien-dao",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2500000,
+        "date": "2026-04-17"
+    },
+    {
+        "id": "VT-2608-010",
+        "destination": "Hà Giang",
+        "category": "nui",
+        "status": "dang-len-ke-hoach",
+        "days": 5,
+        "budget": 6200000,
+        "date": "2026-10-12"
+    },
+    {
+        "id": "VT-2608-011",
+        "destination": "Côn Đảo",
+        "category": "bien-dao",
+        "status": "sap-di",
+        "days": 4,
+        "budget": 7600000,
+        "date": "2026-10-04"
+    },
+    {
+        "id": "VT-2608-012",
+        "destination": "Quy Nhơn",
+        "category": "bien-dao",
+        "status": "da-di",
+        "days": 3,
+        "budget": 4100000,
+        "date": "2026-03-22"
+    },
+    {
+        "id": "VT-2608-013",
+        "destination": "Nha Trang",
+        "category": "bien-dao",
+        "status": "sap-di",
+        "days": 4,
+        "budget": 5700000,
+        "date": "2026-09-30"
+    },
+    {
+        "id": "VT-2608-014",
+        "destination": "Mộc Châu",
+        "category": "nui",
+        "status": "dang-len-ke-hoach",
+        "days": 3,
+        "budget": 3400000,
+        "date": "2026-11-16"
+    },
+    {
+        "id": "VT-2608-015",
+        "destination": "Cao Bằng",
+        "category": "thien-nhien",
+        "status": "dang-len-ke-hoach",
+        "days": 4,
+        "budget": 4900000,
+        "date": "2026-11-25"
+    },
+    {
+        "id": "VT-2608-016",
+        "destination": "Phong Nha - Kẻ Bàng",
+        "category": "thien-nhien",
+        "status": "da-di",
+        "days": 3,
+        "budget": 3700000,
+        "date": "2026-02-14"
+    },
+    {
+        "id": "VT-2608-017",
+        "destination": "Bà Nà Hills",
+        "category": "nghi-duong",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2900000,
+        "date": "2026-01-26"
+    },
+    {
+        "id": "VT-2608-018",
+        "destination": "Tây Ninh",
+        "category": "van-hoa",
+        "status": "sap-di",
+        "days": 2,
+        "budget": 2100000,
+        "date": "2026-09-12"
+    },
+    {
+        "id": "VT-2608-019",
+        "destination": "Buôn Ma Thuột",
+        "category": "van-hoa",
+        "status": "dang-len-ke-hoach",
+        "days": 3,
+        "budget": 3500000,
+        "date": "2026-12-10"
+    },
+    {
+        "id": "VT-2608-020",
+        "destination": "Cần Thơ",
+        "category": "van-hoa",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2300000,
+        "date": "2026-02-28"
+    },
+    {
+        "id": "VT-2608-021",
+        "destination": "Châu Đốc",
+        "category": "van-hoa",
+        "status": "sap-di",
+        "days": 2,
+        "budget": 2600000,
+        "date": "2026-10-20"
+    },
+    {
+        "id": "VT-2608-022",
+        "destination": "Vũng Tàu",
+        "category": "bien-dao",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2200000,
+        "date": "2026-06-08"
+    },
+    {
+        "id": "VT-2608-023",
+        "destination": "Tam Đảo",
+        "category": "nghi-duong",
+        "status": "dang-len-ke-hoach",
+        "days": 2,
+        "budget": 2700000,
+        "date": "2026-10-28"
+    },
+    {
+        "id": "VT-2608-024",
+        "destination": "Cát Bà",
+        "category": "bien-dao",
+        "status": "sap-di",
+        "days": 3,
+        "budget": 4300000,
+        "date": "2026-09-21"
+    },
+    {
+        "id": "VT-2608-025",
+        "destination": "Mai Châu",
+        "category": "nui",
+        "status": "dang-len-ke-hoach",
+        "days": 3,
+        "budget": 3100000,
+        "date": "2026-11-08"
+    },
+    {
+        "id": "VT-2608-026",
+        "destination": "Pù Luông",
+        "category": "thien-nhien",
+        "status": "sap-di",
+        "days": 3,
+        "budget": 3600000,
+        "date": "2026-10-02"
+    },
+    {
+        "id": "VT-2608-027",
+        "destination": "Lý Sơn",
+        "category": "bien-dao",
+        "status": "dang-len-ke-hoach",
+        "days": 3,
+        "budget": 4700000,
+        "date": "2026-12-18"
+    },
+    {
+        "id": "VT-2608-028",
+        "destination": "Y Tý",
+        "category": "nui",
+        "status": "dang-len-ke-hoach",
+        "days": 4,
+        "budget": 4200000,
+        "date": "2026-12-26"
+    },
+    {
+        "id": "VT-2608-029",
+        "destination": "Tràng An",
+        "category": "thien-nhien",
+        "status": "da-di",
+        "days": 2,
+        "budget": 2400000,
+        "date": "2026-05-30"
+    },
+    {
+        "id": "VT-2608-030",
+        "destination": "Bình Ba",
+        "category": "bien-dao",
+        "status": "sap-di",
+        "days": 3,
+        "budget": 3800000,
+        "date": "2026-10-15"
+    }
+]
